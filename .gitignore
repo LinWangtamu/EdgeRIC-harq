@@ -5,3 +5,6 @@ docker/radio_network/srsRAN-5G-ER/build
 docker/radio_network/srs-4G-UE/build
 docker/edgeric-v2/muApp2/outputs
 docker/radio_network/srs-4G-UE/build
+*.a
+*.so
+*.so.*
