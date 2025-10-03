@@ -1126,19 +1126,6 @@ ldpc_rm_test/fast:
 .PHONY : ldpc_rm_test/fast
 
 #=============================================================================
-# Target rules for targets named ldpc_dec_c_test
-
-# Build rule for target.
-ldpc_dec_c_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ldpc_dec_c_test
-.PHONY : ldpc_dec_c_test
-
-# fast build rule for target.
-ldpc_dec_c_test/fast:
-	$(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/build
-.PHONY : ldpc_dec_c_test/fast
-
-#=============================================================================
 # Target rules for targets named ldpc_chain_test
 
 # Build rule for target.
@@ -1191,19 +1178,6 @@ ldpc_enc_avx2_test/fast:
 .PHONY : ldpc_enc_avx2_test/fast
 
 #=============================================================================
-# Target rules for targets named ldpc_enc_avx512_test
-
-# Build rule for target.
-ldpc_enc_avx512_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ldpc_enc_avx512_test
-.PHONY : ldpc_enc_avx512_test
-
-# fast build rule for target.
-ldpc_enc_avx512_test/fast:
-	$(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/build
-.PHONY : ldpc_enc_avx512_test/fast
-
-#=============================================================================
 # Target rules for targets named ldpc_dec_avx2_test
 
 # Build rule for target.
@@ -1217,17 +1191,17 @@ ldpc_dec_avx2_test/fast:
 .PHONY : ldpc_dec_avx2_test/fast
 
 #=============================================================================
-# Target rules for targets named ldpc_dec_avx512_test
+# Target rules for targets named ldpc_dec_c_test
 
 # Build rule for target.
-ldpc_dec_avx512_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ldpc_dec_avx512_test
-.PHONY : ldpc_dec_avx512_test
+ldpc_dec_c_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ldpc_dec_c_test
+.PHONY : ldpc_dec_c_test
 
 # fast build rule for target.
-ldpc_dec_avx512_test/fast:
-	$(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/build
-.PHONY : ldpc_dec_avx512_test/fast
+ldpc_dec_c_test/fast:
+	$(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/build
+.PHONY : ldpc_dec_c_test/fast
 
 #=============================================================================
 # Target rules for targets named polar_interleaver_test
@@ -5333,14 +5307,12 @@ help:
 	@echo "... ldpc_dec_test"
 	@echo "... ldpc_dec_s_test"
 	@echo "... ldpc_rm_test"
-	@echo "... ldpc_dec_c_test"
 	@echo "... ldpc_chain_test"
 	@echo "... ldpc_enc_test"
 	@echo "... ldpc_rm_chain_test"
 	@echo "... ldpc_enc_avx2_test"
-	@echo "... ldpc_enc_avx512_test"
 	@echo "... ldpc_dec_avx2_test"
-	@echo "... ldpc_dec_avx512_test"
+	@echo "... ldpc_dec_c_test"
 	@echo "... polar_interleaver_test"
 	@echo "... polar_chain_test"
 	@echo "... polar_test_utils"

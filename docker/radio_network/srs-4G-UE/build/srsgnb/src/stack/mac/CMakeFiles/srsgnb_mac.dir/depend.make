@@ -56,6 +56,16 @@ srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/harq_softbuffer.cc.o: ../lib/incl
 srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/harq_softbuffer.cc.o: ../srsgnb/hdr/stack/mac/harq_softbuffer.h
 srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/harq_softbuffer.cc.o: ../srsgnb/src/stack/mac/harq_softbuffer.cc
 
+srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o: /home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.h
+srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o: /home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.h
+srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o: /home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp
+srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o: /home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.h
+srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o: /home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.h
+
+srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/mac_nr.cc.o: ../../srsRAN-5G-ER/lib/edgeric/control_mcs.pb.h
+srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/mac_nr.cc.o: ../../srsRAN-5G-ER/lib/edgeric/control_weights.pb.h
+srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/mac_nr.cc.o: ../../srsRAN-5G-ER/lib/edgeric/edgeric.h
+srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/mac_nr.cc.o: ../../srsRAN-5G-ER/lib/edgeric/metrics.pb.h
 srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/mac_nr.cc.o: ../lib/include/srsran/adt/bounded_bitset.h
 srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/mac_nr.cc.o: ../lib/include/srsran/adt/bounded_vector.h
 srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/mac_nr.cc.o: ../lib/include/srsran/adt/circular_array.h

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rmetrics.proto\"\x8d\x01\n\tUeMetrics\x12\x0c\n\x04rnti\x18\x01 \x01(\r\x12\x0b\n\x03\x63qi\x18\x02 \x01(\r\x12\x0b\n\x03snr\x18\x03 \x01(\x02\x12\x10\n\x08tx_bytes\x18\x04 \x01(\x02\x12\x10\n\x08rx_bytes\x18\x05 \x01(\x02\x12\x11\n\tdl_buffer\x18\x06 \x01(\r\x12\x11\n\tul_buffer\x18\x07 \x01(\r\x12\x0e\n\x06\x64l_tbs\x18\x08 \x01(\x02\":\n\x07Metrics\x12\x0f\n\x07tti_cnt\x18\x01 \x01(\r\x12\x1e\n\nue_metrics\x18\x02 \x03(\x0b\x32\n.UeMetricsb\x06proto3')
+  serialized_pb=_b('\n\rmetrics.proto\"\xa2\x01\n\tUeMetrics\x12\x0c\n\x04rnti\x18\x01 \x01(\r\x12\x0b\n\x03\x63qi\x18\x02 \x01(\r\x12\x0b\n\x03snr\x18\x03 \x01(\x02\x12\x10\n\x08tx_bytes\x18\x04 \x01(\x02\x12\x10\n\x08rx_bytes\x18\x05 \x01(\x02\x12\x11\n\tdl_buffer\x18\x06 \x01(\r\x12\x11\n\tul_buffer\x18\x07 \x01(\r\x12\x0e\n\x06\x64l_tbs\x18\x08 \x01(\x02\x12\x13\n\x0bul_harq_ack\x18\x14 \x01(\x08\":\n\x07Metrics\x12\x0f\n\x07tti_cnt\x18\x01 \x01(\r\x12\x1e\n\nue_metrics\x18\x02 \x03(\x0b\x32\n.UeMetricsb\x06proto3')
 )
 
 
@@ -88,6 +88,13 @@ _UEMETRICS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ul_harq_ack', full_name='UeMetrics.ul_harq_ack', index=8,
+      number=20, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -101,7 +108,7 @@ _UEMETRICS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=18,
-  serialized_end=159,
+  serialized_end=180,
 )
 
 
@@ -138,8 +145,8 @@ _METRICS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=161,
-  serialized_end=219,
+  serialized_start=182,
+  serialized_end=240,
 )
 
 _METRICS.fields_by_name['ue_metrics'].message_type = _UEMETRICS

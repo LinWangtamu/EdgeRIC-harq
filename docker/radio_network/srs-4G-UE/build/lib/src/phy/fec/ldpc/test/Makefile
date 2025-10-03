@@ -90,28 +90,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -123,17 +101,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target package_source
 package_source:
@@ -156,6 +123,39 @@ package: preinstall
 package/fast: package
 
 .PHONY : package/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -235,21 +235,6 @@ ldpc_rm_test/fast:
 .PHONY : ldpc_rm_test/fast
 
 # Convenience name for target.
-lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/rule:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/rule
-.PHONY : lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/rule
-
-# Convenience name for target.
-ldpc_dec_c_test: lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/rule
-
-.PHONY : ldpc_dec_c_test
-
-# fast build rule for target.
-ldpc_dec_c_test/fast:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/build
-.PHONY : ldpc_dec_c_test/fast
-
-# Convenience name for target.
 lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_chain_test.dir/rule:
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_chain_test.dir/rule
 .PHONY : lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_chain_test.dir/rule
@@ -310,21 +295,6 @@ ldpc_enc_avx2_test/fast:
 .PHONY : ldpc_enc_avx2_test/fast
 
 # Convenience name for target.
-lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/rule:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/rule
-.PHONY : lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/rule
-
-# Convenience name for target.
-ldpc_enc_avx512_test: lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/rule
-
-.PHONY : ldpc_enc_avx512_test
-
-# fast build rule for target.
-ldpc_enc_avx512_test/fast:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/build
-.PHONY : ldpc_enc_avx512_test/fast
-
-# Convenience name for target.
 lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx2_test.dir/rule:
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx2_test.dir/rule
 .PHONY : lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx2_test.dir/rule
@@ -340,19 +310,19 @@ ldpc_dec_avx2_test/fast:
 .PHONY : ldpc_dec_avx2_test/fast
 
 # Convenience name for target.
-lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/rule:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/rule
-.PHONY : lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/rule
+lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/rule:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/rule
+.PHONY : lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/rule
 
 # Convenience name for target.
-ldpc_dec_avx512_test: lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/rule
+ldpc_dec_c_test: lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/rule
 
-.PHONY : ldpc_dec_avx512_test
+.PHONY : ldpc_dec_c_test
 
 # fast build rule for target.
-ldpc_dec_avx512_test/fast:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/build
-.PHONY : ldpc_dec_avx512_test/fast
+ldpc_dec_c_test/fast:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_c_test.dir/build
+.PHONY : ldpc_dec_c_test/fast
 
 ldpc_chain_test.o: ldpc_chain_test.c.o
 
@@ -407,33 +377,6 @@ ldpc_dec_avx2_test.s: ldpc_dec_avx2_test.c.s
 ldpc_dec_avx2_test.c.s:
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx2_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx2_test.dir/ldpc_dec_avx2_test.c.s
 .PHONY : ldpc_dec_avx2_test.c.s
-
-ldpc_dec_avx512_test.o: ldpc_dec_avx512_test.c.o
-
-.PHONY : ldpc_dec_avx512_test.o
-
-# target to build an object file
-ldpc_dec_avx512_test.c.o:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/ldpc_dec_avx512_test.c.o
-.PHONY : ldpc_dec_avx512_test.c.o
-
-ldpc_dec_avx512_test.i: ldpc_dec_avx512_test.c.i
-
-.PHONY : ldpc_dec_avx512_test.i
-
-# target to preprocess a source file
-ldpc_dec_avx512_test.c.i:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/ldpc_dec_avx512_test.c.i
-.PHONY : ldpc_dec_avx512_test.c.i
-
-ldpc_dec_avx512_test.s: ldpc_dec_avx512_test.c.s
-
-.PHONY : ldpc_dec_avx512_test.s
-
-# target to generate assembly for a file
-ldpc_dec_avx512_test.c.s:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_dec_avx512_test.dir/ldpc_dec_avx512_test.c.s
-.PHONY : ldpc_dec_avx512_test.c.s
 
 ldpc_dec_c_test.o: ldpc_dec_c_test.c.o
 
@@ -543,33 +486,6 @@ ldpc_enc_avx2_test.c.s:
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx2_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx2_test.dir/ldpc_enc_avx2_test.c.s
 .PHONY : ldpc_enc_avx2_test.c.s
 
-ldpc_enc_avx512_test.o: ldpc_enc_avx512_test.c.o
-
-.PHONY : ldpc_enc_avx512_test.o
-
-# target to build an object file
-ldpc_enc_avx512_test.c.o:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/ldpc_enc_avx512_test.c.o
-.PHONY : ldpc_enc_avx512_test.c.o
-
-ldpc_enc_avx512_test.i: ldpc_enc_avx512_test.c.i
-
-.PHONY : ldpc_enc_avx512_test.i
-
-# target to preprocess a source file
-ldpc_enc_avx512_test.c.i:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/ldpc_enc_avx512_test.c.i
-.PHONY : ldpc_enc_avx512_test.c.i
-
-ldpc_enc_avx512_test.s: ldpc_enc_avx512_test.c.s
-
-.PHONY : ldpc_enc_avx512_test.s
-
-# target to generate assembly for a file
-ldpc_enc_avx512_test.c.s:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/build.make lib/src/phy/fec/ldpc/test/CMakeFiles/ldpc_enc_avx512_test.dir/ldpc_enc_avx512_test.c.s
-.PHONY : ldpc_enc_avx512_test.c.s
-
 ldpc_enc_test.o: ldpc_enc_test.c.o
 
 .PHONY : ldpc_enc_test.o
@@ -660,32 +576,27 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... ldpc_dec_test"
 	@echo "... install"
 	@echo "... ldpc_dec_s_test"
 	@echo "... ldpc_rm_test"
-	@echo "... test"
-	@echo "... ldpc_dec_c_test"
 	@echo "... ldpc_chain_test"
 	@echo "... ldpc_enc_test"
 	@echo "... ldpc_rm_chain_test"
 	@echo "... ldpc_enc_avx2_test"
-	@echo "... ldpc_enc_avx512_test"
-	@echo "... package_source"
 	@echo "... ldpc_dec_avx2_test"
-	@echo "... ldpc_dec_avx512_test"
+	@echo "... package_source"
 	@echo "... package"
+	@echo "... ldpc_dec_c_test"
+	@echo "... test"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... ldpc_chain_test.o"
 	@echo "... ldpc_chain_test.i"
 	@echo "... ldpc_chain_test.s"
 	@echo "... ldpc_dec_avx2_test.o"
 	@echo "... ldpc_dec_avx2_test.i"
 	@echo "... ldpc_dec_avx2_test.s"
-	@echo "... ldpc_dec_avx512_test.o"
-	@echo "... ldpc_dec_avx512_test.i"
-	@echo "... ldpc_dec_avx512_test.s"
 	@echo "... ldpc_dec_c_test.o"
 	@echo "... ldpc_dec_c_test.i"
 	@echo "... ldpc_dec_c_test.s"
@@ -698,9 +609,6 @@ help:
 	@echo "... ldpc_enc_avx2_test.o"
 	@echo "... ldpc_enc_avx2_test.i"
 	@echo "... ldpc_enc_avx2_test.s"
-	@echo "... ldpc_enc_avx512_test.o"
-	@echo "... ldpc_enc_avx512_test.i"
-	@echo "... ldpc_enc_avx512_test.s"
 	@echo "... ldpc_enc_test.o"
 	@echo "... ldpc_enc_test.i"
 	@echo "... ldpc_enc_test.s"

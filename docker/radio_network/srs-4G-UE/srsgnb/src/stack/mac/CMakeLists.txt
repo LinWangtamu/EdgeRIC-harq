@@ -35,10 +35,12 @@ set(SOURCES mac_nr.cc
             sched_nr_time_rr.cc
             harq_softbuffer.cc
             sched_nr_signalling.cc
-            sched_nr_interface_utils.cc)
+            sched_nr_interface_utils.cc
+            ../../../../../srsRAN-5G-ER/lib/edgeric/edgeric.cpp)
 
 add_library(srsgnb_mac STATIC ${SOURCES})
-target_link_libraries(srsgnb_mac srsenb_mac_common srsran_mac rrc_nr_asn1)
+target_link_libraries(srsgnb_mac srsenb_mac_common srsran_mac rrc_nr_asn1 ${ZMQ_LIBRARIES} ${Protobuf_LIBRARIES} zmq)
 include_directories(${PROJECT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../../../srsRAN-5G-ER/lib)
 
 add_subdirectory(test)

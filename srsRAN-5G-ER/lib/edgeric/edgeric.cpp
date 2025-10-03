@@ -128,30 +128,24 @@ void edgeric::send_to_er() {
 
 
 // Get weights function
-std::optional<float> edgeric::get_weights(uint16_t rnti) {
-    if (weights_recved.empty()) {
-        return std::nullopt;  // Return no value if the map is empty
+bool edgeric::get_weights(uint16_t rnti, float& value) {
+    auto it = weights_recved.find(rnti);
+    if (it == weights_recved.end()) {
+        return false;
     }
 
-    auto it = weights_recved.find(rnti);
-    if (it != weights_recved.end()) {
-        return it->second;  // Return the weight if the RNTI is found
-    } else {
-        return std::nullopt;  // Return no value if the RNTI is not found
-    }
+    value = it->second;
+    return true;
 }
 
-std::optional<uint8_t> edgeric::get_mcs(uint16_t rnti) {
-    if (mcs_recved.empty()) {
-        return std::nullopt;  // Return no value if the map is empty
+bool edgeric::get_mcs(uint16_t rnti, uint8_t& value) {
+    auto it = mcs_recved.find(rnti);
+    if (it == mcs_recved.end()) {
+        return false;
     }
 
-    auto it = mcs_recved.find(rnti);
-    if (it != mcs_recved.end()) {
-        return it->second;  // Return the weight if the RNTI is found
-    } else {
-        return std::nullopt;  // Return no value if the RNTI is not found
-    }
+    value = it->second;
+    return true;
 }
 
 void edgeric::printmyvariables() {

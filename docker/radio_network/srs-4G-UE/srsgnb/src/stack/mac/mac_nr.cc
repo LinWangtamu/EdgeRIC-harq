@@ -28,6 +28,8 @@
 #include "srsran/common/string_helpers.h"
 #include "srsran/common/time_prof.h"
 #include "srsran/mac/mac_rar_pdu_nr.h"
+#include "edgeric/edgeric.h"
+
 
 //#define WRITE_SIB_PCAP
 
@@ -628,6 +630,9 @@ int mac_nr::pusch_info(const srsran_slot_cfg_t& slot_cfg, mac_interface_phy_nr::
   }
 
   sched->ul_crc_info(rnti, 0, pusch_info.pid, pusch_info.pusch_data.tb[0].crc);
+
+  // push to edgeric: true = ACK, false = NACK
+  ::edgeric::set_ul_harq_ack(rnti, pusch_info.pusch_data.tb[0].crc);
 
   // process only PDUs with CRC=OK
   if (pusch_info.pusch_data.tb[0].crc) {

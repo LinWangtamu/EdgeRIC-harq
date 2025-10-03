@@ -19,6 +19,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "lib/include"
   "../lib/include"
   "../"
+  "../srsgnb/src/stack/mac/../../../../../srsRAN-5G-ER/lib"
   "../cmake/modules"
   )
 

@@ -9,6 +9,7 @@ message UeMetrics {
     uint32 dl_buffer = 6;
     uint32 ul_buffer = 7;
     float dl_tbs = 8;
+    bool ul_harq_ack = 20;  // true = ACK (CRC OK), false = NACK
 }
 
 message Metrics {

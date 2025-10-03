@@ -292,12 +292,13 @@ alloc_result ue_cell_grid_allocator::allocate_dl_grant(const ue_pdsch_grant& gra
       //             0.3 * bwp_dl_cmn.generic_params.crbs.length() : 
       //             0.7 * bwp_dl_cmn.generic_params.crbs.length();
 
-      uint16_t rnti = static_cast<uint16_t>(ue_cc->rnti());
-      std::optional<float> opt_weights_recvd = edgeric::get_weights(rnti);
-      weights_to_log = opt_weights_recvd.has_value() ? opt_weights_recvd.value() : 0.0f;
+      uint16_t rnti      = static_cast<uint16_t>(ue_cc->rnti());
+      float    weight_in = 0.0f;
+      bool     has_weight = edgeric::get_weights(rnti, weight_in);
+      weights_to_log      = has_weight ? weight_in : 0.0f;
 
-      if (opt_weights_recvd.has_value()) {
-          float weights_recvd = opt_weights_recvd.value();
+      if (has_weight) {
+          float weights_recvd = weight_in;
           // mcs_prbs.n_prbs = weights_recvd *  bwp_dl_cmn.generic_params.crbs.length(); 
           mcs_prbs.n_prbs = weights_recvd * this_tti_unused_crbs;
           // std::ofstream logfile2("scheduling-final.txt", std::ios_base::app); // Open log file in append mode
@@ -428,11 +429,9 @@ alloc_result ue_cell_grid_allocator::allocate_dl_grant(const ue_pdsch_grant& gra
     // Reduce estimated MCS by 1 whenever CSI-RS is sent over a particular slot to account for the overhead of CSI-RS
     // REs.
     //Ushasi 
-    uint16_t rnti = static_cast<unsigned int>(ue_cc->rnti());
-    std::optional<uint8_t> opt_mcs_recvd = edgeric::get_mcs(rnti);
-
-    if (opt_mcs_recvd.has_value()) {
-        uint8_t mcs_recvd = opt_mcs_recvd.value();
+    uint16_t rnti        = static_cast<unsigned int>(ue_cc->rnti());
+    uint8_t  mcs_recvd   = 0;
+    if (edgeric::get_mcs(rnti, mcs_recvd)) {
         mcs_prbs.mcs = mcs_recvd;
     }
     

@@ -663,87 +663,6 @@ ldpc/ldpc_dec_c_avx2long_flood.c.s:
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx2long_flood.c.s
 .PHONY : ldpc/ldpc_dec_c_avx2long_flood.c.s
 
-ldpc/ldpc_dec_c_avx512.o: ldpc/ldpc_dec_c_avx512.c.o
-
-.PHONY : ldpc/ldpc_dec_c_avx512.o
-
-# target to build an object file
-ldpc/ldpc_dec_c_avx512.c.o:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.o
-.PHONY : ldpc/ldpc_dec_c_avx512.c.o
-
-ldpc/ldpc_dec_c_avx512.i: ldpc/ldpc_dec_c_avx512.c.i
-
-.PHONY : ldpc/ldpc_dec_c_avx512.i
-
-# target to preprocess a source file
-ldpc/ldpc_dec_c_avx512.c.i:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.i
-.PHONY : ldpc/ldpc_dec_c_avx512.c.i
-
-ldpc/ldpc_dec_c_avx512.s: ldpc/ldpc_dec_c_avx512.c.s
-
-.PHONY : ldpc/ldpc_dec_c_avx512.s
-
-# target to generate assembly for a file
-ldpc/ldpc_dec_c_avx512.c.s:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.s
-.PHONY : ldpc/ldpc_dec_c_avx512.c.s
-
-ldpc/ldpc_dec_c_avx512long.o: ldpc/ldpc_dec_c_avx512long.c.o
-
-.PHONY : ldpc/ldpc_dec_c_avx512long.o
-
-# target to build an object file
-ldpc/ldpc_dec_c_avx512long.c.o:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.o
-.PHONY : ldpc/ldpc_dec_c_avx512long.c.o
-
-ldpc/ldpc_dec_c_avx512long.i: ldpc/ldpc_dec_c_avx512long.c.i
-
-.PHONY : ldpc/ldpc_dec_c_avx512long.i
-
-# target to preprocess a source file
-ldpc/ldpc_dec_c_avx512long.c.i:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.i
-.PHONY : ldpc/ldpc_dec_c_avx512long.c.i
-
-ldpc/ldpc_dec_c_avx512long.s: ldpc/ldpc_dec_c_avx512long.c.s
-
-.PHONY : ldpc/ldpc_dec_c_avx512long.s
-
-# target to generate assembly for a file
-ldpc/ldpc_dec_c_avx512long.c.s:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.s
-.PHONY : ldpc/ldpc_dec_c_avx512long.c.s
-
-ldpc/ldpc_dec_c_avx512long_flood.o: ldpc/ldpc_dec_c_avx512long_flood.c.o
-
-.PHONY : ldpc/ldpc_dec_c_avx512long_flood.o
-
-# target to build an object file
-ldpc/ldpc_dec_c_avx512long_flood.c.o:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.o
-.PHONY : ldpc/ldpc_dec_c_avx512long_flood.c.o
-
-ldpc/ldpc_dec_c_avx512long_flood.i: ldpc/ldpc_dec_c_avx512long_flood.c.i
-
-.PHONY : ldpc/ldpc_dec_c_avx512long_flood.i
-
-# target to preprocess a source file
-ldpc/ldpc_dec_c_avx512long_flood.c.i:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.i
-.PHONY : ldpc/ldpc_dec_c_avx512long_flood.c.i
-
-ldpc/ldpc_dec_c_avx512long_flood.s: ldpc/ldpc_dec_c_avx512long_flood.c.s
-
-.PHONY : ldpc/ldpc_dec_c_avx512long_flood.s
-
-# target to generate assembly for a file
-ldpc/ldpc_dec_c_avx512long_flood.c.s:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.s
-.PHONY : ldpc/ldpc_dec_c_avx512long_flood.c.s
-
 ldpc/ldpc_dec_c_flood.o: ldpc/ldpc_dec_c_flood.c.o
 
 .PHONY : ldpc/ldpc_dec_c_flood.o
@@ -905,60 +824,6 @@ ldpc/ldpc_enc_avx2long.s: ldpc/ldpc_enc_avx2long.c.s
 ldpc/ldpc_enc_avx2long.c.s:
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx2long.c.s
 .PHONY : ldpc/ldpc_enc_avx2long.c.s
-
-ldpc/ldpc_enc_avx512.o: ldpc/ldpc_enc_avx512.c.o
-
-.PHONY : ldpc/ldpc_enc_avx512.o
-
-# target to build an object file
-ldpc/ldpc_enc_avx512.c.o:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o
-.PHONY : ldpc/ldpc_enc_avx512.c.o
-
-ldpc/ldpc_enc_avx512.i: ldpc/ldpc_enc_avx512.c.i
-
-.PHONY : ldpc/ldpc_enc_avx512.i
-
-# target to preprocess a source file
-ldpc/ldpc_enc_avx512.c.i:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.i
-.PHONY : ldpc/ldpc_enc_avx512.c.i
-
-ldpc/ldpc_enc_avx512.s: ldpc/ldpc_enc_avx512.c.s
-
-.PHONY : ldpc/ldpc_enc_avx512.s
-
-# target to generate assembly for a file
-ldpc/ldpc_enc_avx512.c.s:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.s
-.PHONY : ldpc/ldpc_enc_avx512.c.s
-
-ldpc/ldpc_enc_avx512long.o: ldpc/ldpc_enc_avx512long.c.o
-
-.PHONY : ldpc/ldpc_enc_avx512long.o
-
-# target to build an object file
-ldpc/ldpc_enc_avx512long.c.o:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o
-.PHONY : ldpc/ldpc_enc_avx512long.c.o
-
-ldpc/ldpc_enc_avx512long.i: ldpc/ldpc_enc_avx512long.c.i
-
-.PHONY : ldpc/ldpc_enc_avx512long.i
-
-# target to preprocess a source file
-ldpc/ldpc_enc_avx512long.c.i:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.i
-.PHONY : ldpc/ldpc_enc_avx512long.c.i
-
-ldpc/ldpc_enc_avx512long.s: ldpc/ldpc_enc_avx512long.c.s
-
-.PHONY : ldpc/ldpc_enc_avx512long.s
-
-# target to generate assembly for a file
-ldpc/ldpc_enc_avx512long.c.s:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srsran_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.s
-.PHONY : ldpc/ldpc_enc_avx512long.c.s
 
 ldpc/ldpc_enc_c.o: ldpc/ldpc_enc_c.c.o
 
@@ -1756,15 +1621,6 @@ help:
 	@echo "... ldpc/ldpc_dec_c_avx2long_flood.o"
 	@echo "... ldpc/ldpc_dec_c_avx2long_flood.i"
 	@echo "... ldpc/ldpc_dec_c_avx2long_flood.s"
-	@echo "... ldpc/ldpc_dec_c_avx512.o"
-	@echo "... ldpc/ldpc_dec_c_avx512.i"
-	@echo "... ldpc/ldpc_dec_c_avx512.s"
-	@echo "... ldpc/ldpc_dec_c_avx512long.o"
-	@echo "... ldpc/ldpc_dec_c_avx512long.i"
-	@echo "... ldpc/ldpc_dec_c_avx512long.s"
-	@echo "... ldpc/ldpc_dec_c_avx512long_flood.o"
-	@echo "... ldpc/ldpc_dec_c_avx512long_flood.i"
-	@echo "... ldpc/ldpc_dec_c_avx512long_flood.s"
 	@echo "... ldpc/ldpc_dec_c_flood.o"
 	@echo "... ldpc/ldpc_dec_c_flood.i"
 	@echo "... ldpc/ldpc_dec_c_flood.s"
@@ -1783,12 +1639,6 @@ help:
 	@echo "... ldpc/ldpc_enc_avx2long.o"
 	@echo "... ldpc/ldpc_enc_avx2long.i"
 	@echo "... ldpc/ldpc_enc_avx2long.s"
-	@echo "... ldpc/ldpc_enc_avx512.o"
-	@echo "... ldpc/ldpc_enc_avx512.i"
-	@echo "... ldpc/ldpc_enc_avx512.s"
-	@echo "... ldpc/ldpc_enc_avx512long.o"
-	@echo "... ldpc/ldpc_enc_avx512long.i"
-	@echo "... ldpc/ldpc_enc_avx512long.s"
 	@echo "... ldpc/ldpc_enc_c.o"
 	@echo "... ldpc/ldpc_enc_c.i"
 	@echo "... ldpc/ldpc_enc_c.s"

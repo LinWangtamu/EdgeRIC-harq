@@ -1,4 +1,4 @@
-The system is: Linux - 6.8.0-48-generic - x86_64
+The system is: Linux - 6.6.87.2-microsoft-standard-WSL2 - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -14,7 +14,7 @@ The C compiler identification is GNU, found in "/home/EdgeRIC-A-real-time-RIC/sr
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
-Build flags: 
+Build flags: -I../../srsRAN-5G-ER/lib
 Id flags:  
 
 The output was:
@@ -28,13 +28,13 @@ The CXX compiler identification is GNU, found in "/home/EdgeRIC-A-real-time-RIC/
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_8b74a/fast && /usr/bin/make -f CMakeFiles/cmTC_8b74a.dir/build.make CMakeFiles/cmTC_8b74a.dir/build
+Run Build Command(s):/usr/bin/make cmTC_5fddb/fast && /usr/bin/make -f CMakeFiles/cmTC_5fddb.dir/build.make CMakeFiles/cmTC_5fddb.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8b74a.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_8b74a.dir/testCCompiler.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_8b74a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b74a.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_8b74a.dir/testCCompiler.c.o  -o cmTC_8b74a 
+Building C object CMakeFiles/cmTC_5fddb.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_5fddb.dir/testCCompiler.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_5fddb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fddb.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_5fddb.dir/testCCompiler.c.o  -o cmTC_5fddb 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -42,10 +42,10 @@ make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeF
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b838a/fast && /usr/bin/make -f CMakeFiles/cmTC_b838a.dir/build.make CMakeFiles/cmTC_b838a.dir/build
+Run Build Command(s):/usr/bin/make cmTC_edb9b/fast && /usr/bin/make -f CMakeFiles/cmTC_edb9b.dir/build.make CMakeFiles/cmTC_edb9b.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc   -v -o CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+Building C object CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 OFFLOAD_TARGET_NAMES=nvptx-none:hsa
@@ -54,8 +54,8 @@ Target: x86_64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-9QDOt0/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
 gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccRUn5IQ.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccjwc4en.s
 GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)
 	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
 
@@ -75,15 +75,15 @@ GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 01da938ff5dc2163489aa33cb3b747a7
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
- as -v --64 -o CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o /tmp/ccRUn5IQ.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o /tmp/ccjwc4en.s
 GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-Linking C executable cmTC_b838a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b838a.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o  -o cmTC_b838a 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_edb9b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edb9b.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o  -o cmTC_edb9b 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
@@ -95,9 +95,9 @@ Thread model: posix
 gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b838a' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKQkyTh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b838a /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b838a' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_edb9b' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMkMltP.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_edb9b /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_edb9b' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -121,10 +121,10 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_b838a/fast && /usr/bin/make -f CMakeFiles/cmTC_b838a.dir/build.make CMakeFiles/cmTC_b838a.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_edb9b/fast && /usr/bin/make -f CMakeFiles/cmTC_edb9b.dir/build.make CMakeFiles/cmTC_edb9b.dir/build]
   ignore line: [make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [Building C object CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
@@ -133,8 +133,8 @@ Parsed C implicit link information from above output:
   ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-9QDOt0/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccRUn5IQ.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccjwc4en.s]
   ignore line: [GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)]
   ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
   ignore line: []
@@ -154,15 +154,15 @@ Parsed C implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 01da938ff5dc2163489aa33cb3b747a7]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o /tmp/ccRUn5IQ.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o /tmp/ccjwc4en.s]
   ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking C executable cmTC_b838a]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b838a.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o  -o cmTC_b838a ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_edb9b]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edb9b.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o  -o cmTC_edb9b ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
@@ -174,13 +174,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b838a' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKQkyTh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b838a /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_edb9b' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMkMltP.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_edb9b /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccKQkyTh.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccMkMltP.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -198,7 +198,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_b838a] ==> ignore
+    arg [cmTC_edb9b] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> ignore
@@ -210,7 +210,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
-    arg [CMakeFiles/cmTC_b838a.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_edb9b.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -240,13 +240,13 @@ Parsed C implicit link information from above output:
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_f198e/fast && /usr/bin/make -f CMakeFiles/cmTC_f198e.dir/build.make CMakeFiles/cmTC_f198e.dir/build
+Run Build Command(s):/usr/bin/make cmTC_ce622/fast && /usr/bin/make -f CMakeFiles/cmTC_ce622.dir/build.make CMakeFiles/cmTC_ce622.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f198e.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_f198e.dir/testCXXCompiler.cxx.o -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_f198e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f198e.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_f198e.dir/testCXXCompiler.cxx.o  -o cmTC_f198e 
+Building CXX object CMakeFiles/cmTC_ce622.dir/testCXXCompiler.cxx.o
+/usr/bin/c++    -I../../srsRAN-5G-ER/lib    -o CMakeFiles/cmTC_ce622.dir/testCXXCompiler.cxx.o -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_ce622
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce622.dir/link.txt --verbose=1
+/usr/bin/c++  -I../../srsRAN-5G-ER/lib     CMakeFiles/cmTC_ce622.dir/testCXXCompiler.cxx.o  -o cmTC_ce622 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -254,10 +254,10 @@ make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeF
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_1d607/fast && /usr/bin/make -f CMakeFiles/cmTC_1d607.dir/build.make CMakeFiles/cmTC_1d607.dir/build
+Run Build Command(s):/usr/bin/make cmTC_bf431/fast && /usr/bin/make -f CMakeFiles/cmTC_bf431.dir/build.make CMakeFiles/cmTC_bf431.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++    -v -o CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+Building CXX object CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++    -I../../srsRAN-5G-ER/lib    -v -o CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 OFFLOAD_TARGET_NAMES=nvptx-none:hsa
@@ -266,8 +266,8 @@ Target: x86_64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-9QDOt0/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
 gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc9ideVR.s
+COLLECT_GCC_OPTIONS='-I' '../../srsRAN-5G-ER/lib' '-v' '-o' 'CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -I ../../srsRAN-5G-ER/lib -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccpegf8h.s
 GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)
 	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
 
@@ -276,6 +276,7 @@ ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/9"
 ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
 ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"
 ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "../../srsRAN-5G-ER/lib"
 #include "..." search starts here:
 #include <...> search starts here:
  /usr/include/c++/9
@@ -291,15 +292,15 @@ GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 3d1eba838554fa2348dba760e4770469
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- as -v --64 -o CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc9ideVR.s
+COLLECT_GCC_OPTIONS='-I' '../../srsRAN-5G-ER/lib' '-v' '-o' 'CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v -I ../../srsRAN-5G-ER/lib --64 -o CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccpegf8h.s
 GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-Linking CXX executable cmTC_1d607
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d607.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_1d607 
+COLLECT_GCC_OPTIONS='-I' '../../srsRAN-5G-ER/lib' '-v' '-o' 'CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_bf431
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf431.dir/link.txt --verbose=1
+/usr/bin/c++  -I../../srsRAN-5G-ER/lib    -v CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_bf431 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
@@ -311,9 +312,9 @@ Thread model: posix
 gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1d607' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMTNPqj.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1d607 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1d607' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-I' '../../srsRAN-5G-ER/lib' '-v' '-o' 'cmTC_bf431' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccd4VBtJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_bf431 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-I' '../../srsRAN-5G-ER/lib' '-v' '-o' 'cmTC_bf431' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -343,10 +344,10 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_1d607/fast && /usr/bin/make -f CMakeFiles/cmTC_1d607.dir/build.make CMakeFiles/cmTC_1d607.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_bf431/fast && /usr/bin/make -f CMakeFiles/cmTC_bf431.dir/build.make CMakeFiles/cmTC_bf431.dir/build]
   ignore line: [make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++    -v -o CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Building CXX object CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++    -I../../srsRAN-5G-ER/lib    -v -o CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
@@ -355,8 +356,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-9QDOt0/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc9ideVR.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-I' '../../srsRAN-5G-ER/lib' '-v' '-o' 'CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -I ../../srsRAN-5G-ER/lib -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccpegf8h.s]
   ignore line: [GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)]
   ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
   ignore line: []
@@ -365,6 +366,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
   ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"]
   ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "../../srsRAN-5G-ER/lib"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
   ignore line: [ /usr/include/c++/9]
@@ -380,15 +382,15 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 3d1eba838554fa2348dba760e4770469]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc9ideVR.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-I' '../../srsRAN-5G-ER/lib' '-v' '-o' 'CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v -I ../../srsRAN-5G-ER/lib --64 -o CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccpegf8h.s]
   ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking CXX executable cmTC_1d607]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d607.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_1d607 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-I' '../../srsRAN-5G-ER/lib' '-v' '-o' 'CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_bf431]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf431.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++  -I../../srsRAN-5G-ER/lib    -v CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_bf431 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
@@ -400,13 +402,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1d607' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMTNPqj.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1d607 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-I' '../../srsRAN-5G-ER/lib' '-v' '-o' 'cmTC_bf431' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccd4VBtJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_bf431 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccMTNPqj.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccd4VBtJ.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -424,7 +426,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1d607] ==> ignore
+    arg [cmTC_bf431] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> ignore
@@ -436,7 +438,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
-    arg [CMakeFiles/cmTC_1d607.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_bf431.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -462,13 +464,13 @@ Parsed CXX implicit link information from above output:
 Performing C++ SOURCE FILE Test HAVE_CXX_ATOMICS_WITHOUT_LIB succeeded with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_d3882/fast && /usr/bin/make -f CMakeFiles/cmTC_d3882.dir/build.make CMakeFiles/cmTC_d3882.dir/build
+Run Build Command(s):/usr/bin/make cmTC_0ff5f/fast && /usr/bin/make -f CMakeFiles/cmTC_0ff5f.dir/build.make CMakeFiles/cmTC_0ff5f.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d3882.dir/src.cxx.o
-/usr/bin/c++    -DHAVE_CXX_ATOMICS_WITHOUT_LIB  -std=c++11   -o CMakeFiles/cmTC_d3882.dir/src.cxx.o -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_d3882
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3882.dir/link.txt --verbose=1
-/usr/bin/c++   -DHAVE_CXX_ATOMICS_WITHOUT_LIB  -std=c++11    CMakeFiles/cmTC_d3882.dir/src.cxx.o  -o cmTC_d3882 
+Building CXX object CMakeFiles/cmTC_0ff5f.dir/src.cxx.o
+/usr/bin/c++    -I../../srsRAN-5G-ER/lib -DHAVE_CXX_ATOMICS_WITHOUT_LIB  -std=c++11   -o CMakeFiles/cmTC_0ff5f.dir/src.cxx.o -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0ff5f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ff5f.dir/link.txt --verbose=1
+/usr/bin/c++  -I../../srsRAN-5G-ER/lib -DHAVE_CXX_ATOMICS_WITHOUT_LIB  -std=c++11    CMakeFiles/cmTC_0ff5f.dir/src.cxx.o  -o cmTC_0ff5f 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -483,13 +485,13 @@ return std::atomic_is_lock_free(&x);
 Performing C++ SOURCE FILE Test HAVE_CXX_ATOMICS64_WITHOUT_LIB succeeded with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e65df/fast && /usr/bin/make -f CMakeFiles/cmTC_e65df.dir/build.make CMakeFiles/cmTC_e65df.dir/build
+Run Build Command(s):/usr/bin/make cmTC_024f5/fast && /usr/bin/make -f CMakeFiles/cmTC_024f5.dir/build.make CMakeFiles/cmTC_024f5.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e65df.dir/src.cxx.o
-/usr/bin/c++    -DHAVE_CXX_ATOMICS64_WITHOUT_LIB -std=c++11   -o CMakeFiles/cmTC_e65df.dir/src.cxx.o -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_e65df
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e65df.dir/link.txt --verbose=1
-/usr/bin/c++   -DHAVE_CXX_ATOMICS64_WITHOUT_LIB -std=c++11    CMakeFiles/cmTC_e65df.dir/src.cxx.o  -o cmTC_e65df 
+Building CXX object CMakeFiles/cmTC_024f5.dir/src.cxx.o
+/usr/bin/c++    -I../../srsRAN-5G-ER/lib -DHAVE_CXX_ATOMICS64_WITHOUT_LIB -std=c++11   -o CMakeFiles/cmTC_024f5.dir/src.cxx.o -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_024f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_024f5.dir/link.txt --verbose=1
+/usr/bin/c++  -I../../srsRAN-5G-ER/lib -DHAVE_CXX_ATOMICS64_WITHOUT_LIB -std=c++11    CMakeFiles/cmTC_024f5.dir/src.cxx.o  -o cmTC_024f5 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -506,13 +508,13 @@ return std::atomic_is_lock_free(&x);
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_c1428/fast && /usr/bin/make -f CMakeFiles/cmTC_c1428.dir/build.make CMakeFiles/cmTC_c1428.dir/build
+Run Build Command(s):/usr/bin/make cmTC_e6dd6/fast && /usr/bin/make -f CMakeFiles/cmTC_e6dd6.dir/build.make CMakeFiles/cmTC_e6dd6.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c1428.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_c1428.dir/CheckIncludeFile.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_c1428
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1428.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_c1428.dir/CheckIncludeFile.c.o  -o cmTC_c1428 
+Building C object CMakeFiles/cmTC_e6dd6.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e6dd6.dir/CheckIncludeFile.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e6dd6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6dd6.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_e6dd6.dir/CheckIncludeFile.c.o  -o cmTC_e6dd6 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -520,13 +522,13 @@ make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeF
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_1991b/fast && /usr/bin/make -f CMakeFiles/cmTC_1991b.dir/build.make CMakeFiles/cmTC_1991b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_07171/fast && /usr/bin/make -f CMakeFiles/cmTC_07171.dir/build.make CMakeFiles/cmTC_07171.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1991b.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1991b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_1991b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1991b.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_1991b.dir/CheckFunctionExists.c.o  -o cmTC_1991b  -lpthread 
+Building C object CMakeFiles/cmTC_07171.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_07171.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_07171
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07171.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_07171.dir/CheckFunctionExists.c.o  -o cmTC_07171  -lpthread 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -534,13 +536,13 @@ make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeF
 Performing C++ SOURCE FILE Test HAVE_WNO_UNUSED_BUT_SET_VARIABLE succeeded with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b5bdb/fast && /usr/bin/make -f CMakeFiles/cmTC_b5bdb.dir/build.make CMakeFiles/cmTC_b5bdb.dir/build
+Run Build Command(s):/usr/bin/make cmTC_43785/fast && /usr/bin/make -f CMakeFiles/cmTC_43785.dir/build.make CMakeFiles/cmTC_43785.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b5bdb.dir/src.cxx.o
-/usr/bin/c++    -Wall -Wno-comment -Wno-reorder -Wno-unused-variable -Wtype-limits -std=c++14 -fno-strict-aliasing -DHAVE_WNO_UNUSED_BUT_SET_VARIABLE   -Wno-unused-but-set-variable -o CMakeFiles/cmTC_b5bdb.dir/src.cxx.o -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_b5bdb
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5bdb.dir/link.txt --verbose=1
-/usr/bin/c++   -Wall -Wno-comment -Wno-reorder -Wno-unused-variable -Wtype-limits -std=c++14 -fno-strict-aliasing -DHAVE_WNO_UNUSED_BUT_SET_VARIABLE    CMakeFiles/cmTC_b5bdb.dir/src.cxx.o  -o cmTC_b5bdb 
+Building CXX object CMakeFiles/cmTC_43785.dir/src.cxx.o
+/usr/bin/c++    -I../../srsRAN-5G-ER/lib -Wall -Wno-comment -Wno-reorder -Wno-unused-variable -Wtype-limits -std=c++14 -fno-strict-aliasing -DHAVE_WNO_UNUSED_BUT_SET_VARIABLE   -Wno-unused-but-set-variable -o CMakeFiles/cmTC_43785.dir/src.cxx.o -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_43785
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43785.dir/link.txt --verbose=1
+/usr/bin/c++  -I../../srsRAN-5G-ER/lib -Wall -Wno-comment -Wno-reorder -Wno-unused-variable -Wtype-limits -std=c++14 -fno-strict-aliasing -DHAVE_WNO_UNUSED_BUT_SET_VARIABLE    CMakeFiles/cmTC_43785.dir/src.cxx.o  -o cmTC_43785 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -549,13 +551,13 @@ int main() { return 0; }
 Performing C SOURCE FILE Test HAVE_SSE succeeded with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_da297/fast && /usr/bin/make -f CMakeFiles/cmTC_da297.dir/build.make CMakeFiles/cmTC_da297.dir/build
+Run Build Command(s):/usr/bin/make cmTC_356ca/fast && /usr/bin/make -f CMakeFiles/cmTC_356ca.dir/build.make CMakeFiles/cmTC_356ca.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_da297.dir/src.c.o
-/usr/bin/cc   -DHAVE_SSE -msse4.1   -o CMakeFiles/cmTC_da297.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_da297
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da297.dir/link.txt --verbose=1
-/usr/bin/cc  -DHAVE_SSE -msse4.1    CMakeFiles/cmTC_da297.dir/src.c.o  -o cmTC_da297 
+Building C object CMakeFiles/cmTC_356ca.dir/src.c.o
+/usr/bin/cc   -DHAVE_SSE -msse4.1   -o CMakeFiles/cmTC_356ca.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_356ca
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_356ca.dir/link.txt --verbose=1
+/usr/bin/cc  -DHAVE_SSE -msse4.1    CMakeFiles/cmTC_356ca.dir/src.c.o  -o cmTC_356ca 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -574,13 +576,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_AVX succeeded with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_91d20/fast && /usr/bin/make -f CMakeFiles/cmTC_91d20.dir/build.make CMakeFiles/cmTC_91d20.dir/build
+Run Build Command(s):/usr/bin/make cmTC_af699/fast && /usr/bin/make -f CMakeFiles/cmTC_af699.dir/build.make CMakeFiles/cmTC_af699.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_91d20.dir/src.c.o
-/usr/bin/cc   -DHAVE_AVX -mavx   -o CMakeFiles/cmTC_91d20.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_91d20
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91d20.dir/link.txt --verbose=1
-/usr/bin/cc  -DHAVE_AVX -mavx    CMakeFiles/cmTC_91d20.dir/src.c.o  -o cmTC_91d20 
+Building C object CMakeFiles/cmTC_af699.dir/src.c.o
+/usr/bin/cc   -DHAVE_AVX -mavx   -o CMakeFiles/cmTC_af699.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_af699
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af699.dir/link.txt --verbose=1
+/usr/bin/cc  -DHAVE_AVX -mavx    CMakeFiles/cmTC_af699.dir/src.c.o  -o cmTC_af699 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -608,13 +610,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_AVX2 succeeded with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_36ff7/fast && /usr/bin/make -f CMakeFiles/cmTC_36ff7.dir/build.make CMakeFiles/cmTC_36ff7.dir/build
+Run Build Command(s):/usr/bin/make cmTC_55b6b/fast && /usr/bin/make -f CMakeFiles/cmTC_55b6b.dir/build.make CMakeFiles/cmTC_55b6b.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_36ff7.dir/src.c.o
-/usr/bin/cc   -DHAVE_AVX2 -mavx2   -o CMakeFiles/cmTC_36ff7.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_36ff7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36ff7.dir/link.txt --verbose=1
-/usr/bin/cc  -DHAVE_AVX2 -mavx2    CMakeFiles/cmTC_36ff7.dir/src.c.o  -o cmTC_36ff7 
+Building C object CMakeFiles/cmTC_55b6b.dir/src.c.o
+/usr/bin/cc   -DHAVE_AVX2 -mavx2   -o CMakeFiles/cmTC_55b6b.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_55b6b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55b6b.dir/link.txt --verbose=1
+/usr/bin/cc  -DHAVE_AVX2 -mavx2    CMakeFiles/cmTC_55b6b.dir/src.c.o  -o cmTC_55b6b 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -642,13 +644,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_FMA succeeded with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_39005/fast && /usr/bin/make -f CMakeFiles/cmTC_39005.dir/build.make CMakeFiles/cmTC_39005.dir/build
+Run Build Command(s):/usr/bin/make cmTC_e89c7/fast && /usr/bin/make -f CMakeFiles/cmTC_e89c7.dir/build.make CMakeFiles/cmTC_e89c7.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_39005.dir/src.c.o
-/usr/bin/cc   -DHAVE_FMA -mfma   -o CMakeFiles/cmTC_39005.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_39005
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39005.dir/link.txt --verbose=1
-/usr/bin/cc  -DHAVE_FMA -mfma    CMakeFiles/cmTC_39005.dir/src.c.o  -o cmTC_39005 
+Building C object CMakeFiles/cmTC_e89c7.dir/src.c.o
+/usr/bin/cc   -DHAVE_FMA -mfma   -o CMakeFiles/cmTC_e89c7.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e89c7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e89c7.dir/link.txt --verbose=1
+/usr/bin/cc  -DHAVE_FMA -mfma    CMakeFiles/cmTC_e89c7.dir/src.c.o  -o cmTC_e89c7 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -674,50 +676,16 @@ Source file was:
               }
               return 0;
             }
-Performing C SOURCE FILE Test HAVE_AVX512 succeeded with the following output:
-Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make cmTC_959cd/fast && /usr/bin/make -f CMakeFiles/cmTC_959cd.dir/build.make CMakeFiles/cmTC_959cd.dir/build
-make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_959cd.dir/src.c.o
-/usr/bin/cc   -DHAVE_AVX512 -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512   -o CMakeFiles/cmTC_959cd.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_959cd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_959cd.dir/link.txt --verbose=1
-/usr/bin/cc  -DHAVE_AVX512 -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512    CMakeFiles/cmTC_959cd.dir/src.c.o  -o cmTC_959cd 
-make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-
-
-Return value: 1
-Source file was:
-
-          #include <immintrin.h>
-          int main()
-          {
-            __m512i a, b, c;
-            const int src[16] = { 0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8 , 0x9, 0xA, 0xB, 0xC, 0xD, 0xE, 0xF};
-            int dst[16];
-            a =  _mm512_loadu_si512( (__m512i*)src );
-            b =  _mm512_loadu_si512( (__m512i*)src );
-            c = _mm512_add_epi32( a, b );
-            _mm512_storeu_si512( (__m512i*)dst, c );
-            int i = 0;
-            for( i = 0; i < 16; i++ ){
-              if( ( src[i] + src[i] ) != dst[i] ){
-                return -1;
-              }
-            }
-            return 0;
-          }
 Performing C SOURCE FILE Test HAVE_MARCH_native succeeded with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_a0d30/fast && /usr/bin/make -f CMakeFiles/cmTC_a0d30.dir/build.make CMakeFiles/cmTC_a0d30.dir/build
+Run Build Command(s):/usr/bin/make cmTC_16a14/fast && /usr/bin/make -f CMakeFiles/cmTC_16a14.dir/build.make CMakeFiles/cmTC_16a14.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a0d30.dir/src.c.o
-/usr/bin/cc   -DHAVE_MARCH_native -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512   -march=native -o CMakeFiles/cmTC_a0d30.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_a0d30
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a0d30.dir/link.txt --verbose=1
-/usr/bin/cc  -DHAVE_MARCH_native -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512    CMakeFiles/cmTC_a0d30.dir/src.c.o  -o cmTC_a0d30 
+Building C object CMakeFiles/cmTC_16a14.dir/src.c.o
+/usr/bin/cc   -DHAVE_MARCH_native -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512   -march=native -o CMakeFiles/cmTC_16a14.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_16a14
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16a14.dir/link.txt --verbose=1
+/usr/bin/cc  -DHAVE_MARCH_native -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512    CMakeFiles/cmTC_16a14.dir/src.c.o  -o cmTC_16a14 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -726,13 +694,13 @@ int main(void) { return 0; }
 Performing C++ SOURCE FILE Test HAVE_VISIBILITY_HIDDEN_CXX succeeded with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e0a7b/fast && /usr/bin/make -f CMakeFiles/cmTC_e0a7b.dir/build.make CMakeFiles/cmTC_e0a7b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_cad5c/fast && /usr/bin/make -f CMakeFiles/cmTC_cad5c.dir/build.make CMakeFiles/cmTC_cad5c.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e0a7b.dir/src.cxx.o
-/usr/bin/c++    -Wall -Wno-comment -Wno-reorder -Wno-unused-variable -Wtype-limits -std=c++14 -fno-strict-aliasing -Wno-unused-but-set-variable -march=native -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -DHAVE_VISIBILITY_HIDDEN_CXX -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512   -fvisibility=hidden -o CMakeFiles/cmTC_e0a7b.dir/src.cxx.o -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_e0a7b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0a7b.dir/link.txt --verbose=1
-/usr/bin/c++   -Wall -Wno-comment -Wno-reorder -Wno-unused-variable -Wtype-limits -std=c++14 -fno-strict-aliasing -Wno-unused-but-set-variable -march=native -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -DHAVE_VISIBILITY_HIDDEN_CXX -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512    CMakeFiles/cmTC_e0a7b.dir/src.cxx.o  -o cmTC_e0a7b 
+Building CXX object CMakeFiles/cmTC_cad5c.dir/src.cxx.o
+/usr/bin/c++    -I../../srsRAN-5G-ER/lib -Wall -Wno-comment -Wno-reorder -Wno-unused-variable -Wtype-limits -std=c++14 -fno-strict-aliasing -Wno-unused-but-set-variable -march=native -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -DHAVE_VISIBILITY_HIDDEN_CXX -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512   -fvisibility=hidden -o CMakeFiles/cmTC_cad5c.dir/src.cxx.o -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_cad5c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cad5c.dir/link.txt --verbose=1
+/usr/bin/c++  -I../../srsRAN-5G-ER/lib -Wall -Wno-comment -Wno-reorder -Wno-unused-variable -Wtype-limits -std=c++14 -fno-strict-aliasing -Wno-unused-but-set-variable -march=native -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -DHAVE_VISIBILITY_HIDDEN_CXX -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512    CMakeFiles/cmTC_cad5c.dir/src.cxx.o  -o cmTC_cad5c 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -741,13 +709,13 @@ int main() { return 0; }
 Performing C SOURCE FILE Test HAVE_ERROR_INCOMPATIBLE succeeded with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_3fc53/fast && /usr/bin/make -f CMakeFiles/cmTC_3fc53.dir/build.make CMakeFiles/cmTC_3fc53.dir/build
+Run Build Command(s):/usr/bin/make cmTC_4111a/fast && /usr/bin/make -f CMakeFiles/cmTC_4111a.dir/build.make CMakeFiles/cmTC_4111a.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3fc53.dir/src.c.o
-/usr/bin/cc   -march=native -DHAVE_ERROR_INCOMPATIBLE -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512   -Werror=incompatible-pointer-types -o CMakeFiles/cmTC_3fc53.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_3fc53
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3fc53.dir/link.txt --verbose=1
-/usr/bin/cc  -march=native -DHAVE_ERROR_INCOMPATIBLE -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512    CMakeFiles/cmTC_3fc53.dir/src.c.o  -o cmTC_3fc53 
+Building C object CMakeFiles/cmTC_4111a.dir/src.c.o
+/usr/bin/cc   -march=native -DHAVE_ERROR_INCOMPATIBLE -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512   -Werror=incompatible-pointer-types -o CMakeFiles/cmTC_4111a.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4111a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4111a.dir/link.txt --verbose=1
+/usr/bin/cc  -march=native -DHAVE_ERROR_INCOMPATIBLE -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512    CMakeFiles/cmTC_4111a.dir/src.c.o  -o cmTC_4111a 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 
@@ -756,13 +724,13 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_VISIBILITY_HIDDEN_C succeeded with the following output:
 Change Dir: /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_36087/fast && /usr/bin/make -f CMakeFiles/cmTC_36087.dir/build.make CMakeFiles/cmTC_36087.dir/build
+Run Build Command(s):/usr/bin/make cmTC_45e63/fast && /usr/bin/make -f CMakeFiles/cmTC_45e63.dir/build.make CMakeFiles/cmTC_45e63.dir/build
 make[1]: Entering directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_36087.dir/src.c.o
-/usr/bin/cc   -march=native -Werror=incompatible-pointer-types -Wall -Wno-comment -Wno-write-strings -Wno-unused-result -Wformat -Wmissing-field-initializers -Wtype-limits -std=c99 -fno-strict-aliasing -D_GNU_SOURCE -Wno-unused-but-set-variable -O3 -fno-trapping-math -fno-math-errno -DBUILD_TYPE_RELEASE -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -mfma -DLV_HAVE_FMA -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512 -Ofast -funroll-loops -DHAVE_VISIBILITY_HIDDEN_C  -march=native -Werror=incompatible-pointer-types -Wall -Wno-comment -Wno-write-strings -Wno-unused-result -Wformat -Wmissing-field-initializers -Wtype-limits -std=c99 -fno-strict-aliasing -D_GNU_SOURCE -Wno-unused-but-set-variable -O3 -fno-trapping-math -fno-math-errno -DBUILD_TYPE_RELEASE -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -mfma -DLV_HAVE_FMA -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512 -Ofast -funroll-loops   -fvisibility=hidden -o CMakeFiles/cmTC_36087.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_36087
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36087.dir/link.txt --verbose=1
-/usr/bin/cc  -march=native -Werror=incompatible-pointer-types -Wall -Wno-comment -Wno-write-strings -Wno-unused-result -Wformat -Wmissing-field-initializers -Wtype-limits -std=c99 -fno-strict-aliasing -D_GNU_SOURCE -Wno-unused-but-set-variable -O3 -fno-trapping-math -fno-math-errno -DBUILD_TYPE_RELEASE -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -mfma -DLV_HAVE_FMA -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512 -Ofast -funroll-loops -DHAVE_VISIBILITY_HIDDEN_C  -march=native -Werror=incompatible-pointer-types -Wall -Wno-comment -Wno-write-strings -Wno-unused-result -Wformat -Wmissing-field-initializers -Wtype-limits -std=c99 -fno-strict-aliasing -D_GNU_SOURCE -Wno-unused-but-set-variable -O3 -fno-trapping-math -fno-math-errno -DBUILD_TYPE_RELEASE -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -mfma -DLV_HAVE_FMA -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512 -Ofast -funroll-loops    CMakeFiles/cmTC_36087.dir/src.c.o  -o cmTC_36087 
+Building C object CMakeFiles/cmTC_45e63.dir/src.c.o
+/usr/bin/cc   -march=native -Werror=incompatible-pointer-types -Wall -Wno-comment -Wno-write-strings -Wno-unused-result -Wformat -Wmissing-field-initializers -Wtype-limits -std=c99 -fno-strict-aliasing -D_GNU_SOURCE -Wno-unused-but-set-variable -O3 -fno-trapping-math -fno-math-errno -DBUILD_TYPE_RELEASE -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -mfma -DLV_HAVE_FMA -Ofast -funroll-loops -DHAVE_VISIBILITY_HIDDEN_C  -march=native -Werror=incompatible-pointer-types -Wall -Wno-comment -Wno-write-strings -Wno-unused-result -Wformat -Wmissing-field-initializers -Wtype-limits -std=c99 -fno-strict-aliasing -D_GNU_SOURCE -Wno-unused-but-set-variable -O3 -fno-trapping-math -fno-math-errno -DBUILD_TYPE_RELEASE -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -mfma -DLV_HAVE_FMA -Ofast -funroll-loops   -fvisibility=hidden -o CMakeFiles/cmTC_45e63.dir/src.c.o   -c /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_45e63
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45e63.dir/link.txt --verbose=1
+/usr/bin/cc  -march=native -Werror=incompatible-pointer-types -Wall -Wno-comment -Wno-write-strings -Wno-unused-result -Wformat -Wmissing-field-initializers -Wtype-limits -std=c99 -fno-strict-aliasing -D_GNU_SOURCE -Wno-unused-but-set-variable -O3 -fno-trapping-math -fno-math-errno -DBUILD_TYPE_RELEASE -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -mfma -DLV_HAVE_FMA -Ofast -funroll-loops -DHAVE_VISIBILITY_HIDDEN_C  -march=native -Werror=incompatible-pointer-types -Wall -Wno-comment -Wno-write-strings -Wno-unused-result -Wformat -Wmissing-field-initializers -Wtype-limits -std=c99 -fno-strict-aliasing -D_GNU_SOURCE -Wno-unused-but-set-variable -O3 -fno-trapping-math -fno-math-errno -DBUILD_TYPE_RELEASE -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -mfma -DLV_HAVE_FMA -Ofast -funroll-loops    CMakeFiles/cmTC_45e63.dir/src.c.o  -o cmTC_45e63 
 make[1]: Leaving directory '/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles/CMakeTmp'
 
 

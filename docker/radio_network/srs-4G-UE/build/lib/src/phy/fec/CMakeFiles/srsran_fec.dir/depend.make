@@ -101,30 +101,6 @@ lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx2long_flood.c.o: ..
 lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx2long_flood.c.o: ../lib/src/phy/fec/ldpc/ldpc_dec_c_avx2long_flood.c
 lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx2long_flood.c.o: ../lib/src/phy/fec/utils_avx2.h
 
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.o: ../lib/include/srsran/config.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.o: ../lib/include/srsran/phy/fec/ldpc/base_graph.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.o: ../lib/include/srsran/phy/utils/vector.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.o: ../lib/src/phy/fec/ldpc/ldpc_avx512_consts.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.o: ../lib/src/phy/fec/ldpc/ldpc_dec_all.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.o: ../lib/src/phy/fec/ldpc/ldpc_dec_c_avx512.c
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.o: ../lib/src/phy/fec/utils_avx512.h
-
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.o: ../lib/include/srsran/config.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.o: ../lib/include/srsran/phy/fec/ldpc/base_graph.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.o: ../lib/include/srsran/phy/utils/vector.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.o: ../lib/src/phy/fec/ldpc/ldpc_avx512_consts.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.o: ../lib/src/phy/fec/ldpc/ldpc_dec_all.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.o: ../lib/src/phy/fec/ldpc/ldpc_dec_c_avx512long.c
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.o: ../lib/src/phy/fec/utils_avx512.h
-
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.o: ../lib/include/srsran/config.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.o: ../lib/include/srsran/phy/fec/ldpc/base_graph.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.o: ../lib/include/srsran/phy/utils/vector.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.o: ../lib/src/phy/fec/ldpc/ldpc_avx512_consts.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.o: ../lib/src/phy/fec/ldpc/ldpc_dec_all.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.o: ../lib/src/phy/fec/ldpc/ldpc_dec_c_avx512long_flood.c
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.o: ../lib/src/phy/fec/utils_avx512.h
-
 lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_flood.c.o: ../lib/include/srsran/config.h
 lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_flood.c.o: ../lib/include/srsran/phy/fec/ldpc/base_graph.h
 lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_flood.c.o: ../lib/include/srsran/phy/utils/vector.h
@@ -176,28 +152,6 @@ lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx2long.c.o: ../lib/src
 lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx2long.c.o: ../lib/src/phy/fec/ldpc/ldpc_enc_all.h
 lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx2long.c.o: ../lib/src/phy/fec/ldpc/ldpc_enc_avx2long.c
 lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx2long.c.o: ../lib/src/phy/fec/utils_avx2.h
-
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o: ../lib/include/srsran/config.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o: ../lib/include/srsran/phy/fec/ldpc/base_graph.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o: ../lib/include/srsran/phy/fec/ldpc/ldpc_encoder.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o: ../lib/include/srsran/phy/utils/debug.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o: ../lib/include/srsran/phy/utils/phy_logger.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o: ../lib/include/srsran/phy/utils/vector.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o: ../lib/src/phy/fec/ldpc/ldpc_avx512_consts.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o: ../lib/src/phy/fec/ldpc/ldpc_enc_all.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o: ../lib/src/phy/fec/ldpc/ldpc_enc_avx512.c
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o: ../lib/src/phy/fec/utils_avx512.h
-
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o: ../lib/include/srsran/config.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o: ../lib/include/srsran/phy/fec/ldpc/base_graph.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o: ../lib/include/srsran/phy/fec/ldpc/ldpc_encoder.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o: ../lib/include/srsran/phy/utils/debug.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o: ../lib/include/srsran/phy/utils/phy_logger.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o: ../lib/include/srsran/phy/utils/vector.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o: ../lib/src/phy/fec/ldpc/ldpc_avx512_consts.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o: ../lib/src/phy/fec/ldpc/ldpc_enc_all.h
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o: ../lib/src/phy/fec/ldpc/ldpc_enc_avx512long.c
-lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o: ../lib/src/phy/fec/utils_avx512.h
 
 lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_c.c.o: ../lib/include/srsran/config.h
 lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_c.c.o: ../lib/include/srsran/phy/fec/ldpc/base_graph.h

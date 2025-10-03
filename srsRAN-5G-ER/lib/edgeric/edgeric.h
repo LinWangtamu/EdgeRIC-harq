@@ -6,7 +6,6 @@
 #include <map>
 #include <tuple>
 #include <zmq.hpp>
-#include <optional>
 
 // #include "metrics.pb.h"
 #include "control_mcs.pb.h"
@@ -57,15 +56,14 @@ public:
     static void get_mcs_from_er();
 
     //////////////////////////////////// Static getters - sets the control actions - called at slot beginning
-    
-    static std::optional<float> get_weights(uint16_t);
-    static std::optional<uint8_t> get_mcs(uint16_t);
+
+    static bool get_weights(uint16_t, float&);
+    static bool get_mcs(uint16_t, uint8_t&);
     
 
 
 };
 
 #endif // EDGERIC_H
-
 
 

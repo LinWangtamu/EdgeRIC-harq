@@ -6,7 +6,6 @@
 #include <map>
 #include <tuple>
 #include <zmq.hpp>
-#include <optional>
 
 // #include "metrics.pb.h"
 #include "control_mcs.pb.h"
@@ -27,6 +26,8 @@ private:
     static std::map<uint16_t, uint32_t> ue_ul_buffers;
     static std::map<uint16_t, uint32_t> ue_dl_buffers;
     static std::map<uint16_t, float> dl_tbs_ues;
+    
+    static std::map<uint16_t, bool> ul_harq_ack;
 
     static uint32_t er_ran_index_weights;
     static uint32_t er_ran_index_mcs;
@@ -49,6 +50,7 @@ public:
     static void set_tx_bytes(uint16_t rnti, float tbs) {tx_bytes[rnti] += tbs;} // ue_dl_buffers[rnti] -= tbs; }
     static void set_rx_bytes(uint16_t rnti, float tbs) {rx_bytes[rnti] += tbs;} // ue_ul_buffers[rnti] -= tbs;}
     static void set_dl_tbs(uint16_t rnti, float tbs) {dl_tbs_ues[rnti] = tbs;}
+    static void set_ul_harq_ack(uint16_t rnti, bool ack);
     //////////////////////////////////// ZMQ function to send RT-E2 Report 
     static void send_to_er();
     
@@ -57,15 +59,13 @@ public:
     static void get_mcs_from_er();
 
     //////////////////////////////////// Static getters - sets the control actions - called at slot beginning
-    
-    static std::optional<float> get_weights(uint16_t);
-    static std::optional<uint8_t> get_mcs(uint16_t);
+
+    static bool get_weights(uint16_t, float&);
+    static bool get_mcs(uint16_t, uint8_t&);
     
 
 
 };
 
 #endif // EDGERIC_H
-
-
 

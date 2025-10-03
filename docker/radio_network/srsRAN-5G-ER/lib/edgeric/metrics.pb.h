@@ -195,6 +195,12 @@ class UeMetrics : public ::google::protobuf::Message /* @@protoc_insertion_point
   float dl_tbs() const;
   void set_dl_tbs(float value);
 
+  // bool ul_harq_ack = 20;
+  void clear_ul_harq_ack();
+  static const int kUlHarqAckFieldNumber = 20;
+  bool ul_harq_ack() const;
+  void set_ul_harq_ack(bool value);
+
   // @@protoc_insertion_point(class_scope:UeMetrics)
  private:
 
@@ -207,6 +213,7 @@ class UeMetrics : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::google::protobuf::uint32 dl_buffer_;
   ::google::protobuf::uint32 ul_buffer_;
   float dl_tbs_;
+  bool ul_harq_ack_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_metrics_2eproto::TableStruct;
 };
@@ -447,6 +454,20 @@ inline void UeMetrics::set_dl_tbs(float value) {
   
   dl_tbs_ = value;
   // @@protoc_insertion_point(field_set:UeMetrics.dl_tbs)
+}
+
+// bool ul_harq_ack = 20;
+inline void UeMetrics::clear_ul_harq_ack() {
+  ul_harq_ack_ = false;
+}
+inline bool UeMetrics::ul_harq_ack() const {
+  // @@protoc_insertion_point(field_get:UeMetrics.ul_harq_ack)
+  return ul_harq_ack_;
+}
+inline void UeMetrics::set_ul_harq_ack(bool value) {
+  
+  ul_harq_ack_ = value;
+  // @@protoc_insertion_point(field_set:UeMetrics.ul_harq_ack)
 }
 
 // -------------------------------------------------------------------

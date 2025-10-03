@@ -231,6 +231,33 @@ harq_softbuffer.cc.s:
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/build.make srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/harq_softbuffer.cc.s
 .PHONY : harq_softbuffer.cc.s
 
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.o: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.o
+
+# target to build an object file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/build.make srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o
+
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.i: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.i
+
+# target to preprocess a source file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/build.make srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i
+
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.s: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.s
+
+# target to generate assembly for a file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/build.make srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s
+
 mac_nr.o: mac_nr.cc.o
 
 .PHONY : mac_nr.o
@@ -709,6 +736,9 @@ help:
 	@echo "... harq_softbuffer.o"
 	@echo "... harq_softbuffer.i"
 	@echo "... harq_softbuffer.s"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.o"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.i"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.s"
 	@echo "... mac_nr.o"
 	@echo "... mac_nr.i"
 	@echo "... mac_nr.s"

@@ -103,11 +103,6 @@ srsran_phy_EXTERNAL_OBJECTS = \
 "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx2long_flood.c.o" \
 "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx2.c.o" \
 "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx2long.c.o" \
-"/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.o" \
-"/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.o" \
-"/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.o" \
-"/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o" \
-"/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o" \
 "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/base_graph.c.o" \
 "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_f.c.o" \
 "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_s.c.o" \
@@ -305,11 +300,6 @@ lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc
 lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx2long_flood.c.o
 lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx2.c.o
 lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx2long.c.o
-lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512.c.o
-lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long.c.o
-lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_c_avx512long_flood.c.o
-lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512.c.o
-lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_enc_avx512long.c.o
 lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/base_graph.c.o
 lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_f.c.o
 lib/src/phy/libsrsran_phy.a: lib/src/phy/fec/CMakeFiles/srsran_fec.dir/ldpc/ldpc_dec_s.c.o

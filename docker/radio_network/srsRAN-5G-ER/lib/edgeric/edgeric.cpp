@@ -12,6 +12,7 @@ std::map<uint16_t, float> edgeric::tx_bytes = {};
 std::map<uint16_t, uint32_t> edgeric::ue_ul_buffers = {};
 std::map<uint16_t, uint32_t> edgeric::ue_dl_buffers = {};
 std::map<uint16_t, float> edgeric::dl_tbs_ues = {};
+std::map<uint16_t, bool> edgeric::ul_harq_ack = {};
 
 // std::map<uint16_t, float> edgeric::weights_recved = {};
 std::map<uint16_t, float> edgeric::weights_recved = {};
@@ -32,6 +33,10 @@ zmq::context_t context;
 zmq::socket_t publisher(context, ZMQ_PUB);
 zmq::socket_t subscriber_weights(context, ZMQ_SUB);
 zmq::socket_t subscriber_mcs(context, ZMQ_SUB);
+
+void edgeric::set_ul_harq_ack(uint16_t rnti, bool ack) {
+    ul_harq_ack[rnti] = ack;
+}
 
 void edgeric::init() {
     // publisher.bind("ipc:///tmp/metrics");
@@ -101,6 +106,11 @@ void edgeric::send_to_er() {
         // Set UL Buffer, default to 0 if not available
         auto dl_tbs_it = dl_tbs_ues.find(rnti);
         ue_metrics->set_dl_tbs((dl_tbs_it != dl_tbs_ues.end()) ? dl_tbs_it->second : 0);
+
+        auto ack_it = ul_harq_ack.find(rnti);
+        if (ack_it != ul_harq_ack.end()) {
+            ue_metrics->set_ul_harq_ack(ack_it->second);
+        }
     }
 
     // Serialize the Metrics message to a string
@@ -122,36 +132,31 @@ void edgeric::send_to_er() {
     tx_bytes.clear();
     rx_bytes.clear();
     dl_tbs_ues.clear();
+    ul_harq_ack.clear();
     // ue_dl_buffers.clear();
     // ue_ul_buffers.clear();
 }
 
 
 // Get weights function
-std::optional<float> edgeric::get_weights(uint16_t rnti) {
-    if (weights_recved.empty()) {
-        return std::nullopt;  // Return no value if the map is empty
+bool edgeric::get_weights(uint16_t rnti, float& value) {
+    auto it = weights_recved.find(rnti);
+    if (it == weights_recved.end()) {
+        return false;
     }
 
-    auto it = weights_recved.find(rnti);
-    if (it != weights_recved.end()) {
-        return it->second;  // Return the weight if the RNTI is found
-    } else {
-        return std::nullopt;  // Return no value if the RNTI is not found
-    }
+    value = it->second;
+    return true;
 }
 
-std::optional<uint8_t> edgeric::get_mcs(uint16_t rnti) {
-    if (mcs_recved.empty()) {
-        return std::nullopt;  // Return no value if the map is empty
+bool edgeric::get_mcs(uint16_t rnti, uint8_t& value) {
+    auto it = mcs_recved.find(rnti);
+    if (it == mcs_recved.end()) {
+        return false;
     }
 
-    auto it = mcs_recved.find(rnti);
-    if (it != mcs_recved.end()) {
-        return it->second;  // Return the weight if the RNTI is found
-    } else {
-        return std::nullopt;  // Return no value if the RNTI is not found
-    }
+    value = it->second;
+    return true;
 }
 
 void edgeric::printmyvariables() {
