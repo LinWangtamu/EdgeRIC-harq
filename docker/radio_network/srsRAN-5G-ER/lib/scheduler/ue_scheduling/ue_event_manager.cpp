@@ -339,6 +339,8 @@ void ue_event_manager::handle_crc_indication(const ul_crc_indication& crc_ind)
             return;
           }
 
+          edgeric::set_ul_harq_ack(static_cast<unsigned int>(crc.rnti), crc.tb_crc_success);
+
           // Process Timing Advance Offset.
           if (crc.tb_crc_success and crc.time_advance_offset.has_value() and crc.ul_sinr_dB.has_value()) {
             ue_db[ue_cc.ue_index].handle_ul_n_ta_update_indication(
