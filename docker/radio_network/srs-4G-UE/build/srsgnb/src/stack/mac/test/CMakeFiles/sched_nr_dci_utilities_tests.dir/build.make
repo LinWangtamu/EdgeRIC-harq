@@ -91,6 +91,8 @@ srsgnb/src/stack/mac/test/sched_nr_dci_utilities_tests: /usr/lib/x86_64-linux-gn
 srsgnb/src/stack/mac/test/sched_nr_dci_utilities_tests: lib/src/support/libsupport.a
 srsgnb/src/stack/mac/test/sched_nr_dci_utilities_tests: lib/src/srslog/libsrslog.a
 srsgnb/src/stack/mac/test/sched_nr_dci_utilities_tests: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+srsgnb/src/stack/mac/test/sched_nr_dci_utilities_tests: srsgnb/src/stack/mac/libedgeric.a
+srsgnb/src/stack/mac/test/sched_nr_dci_utilities_tests: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 srsgnb/src/stack/mac/test/sched_nr_dci_utilities_tests: srsgnb/src/stack/mac/test/CMakeFiles/sched_nr_dci_utilities_tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable sched_nr_dci_utilities_tests"
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sched_nr_dci_utilities_tests.dir/link.txt --verbose=$(VERBOSE)

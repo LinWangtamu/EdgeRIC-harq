@@ -31,6 +31,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/asn1/CMakeFiles/rrc_nr_asn1.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsenb/src/stack/mac/common/CMakeFiles/srsenb_mac_common.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/mac/CMakeFiles/srsran_mac.dir/DependInfo.cmake"
+  "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/asn1/CMakeFiles/asn1_utils.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/CMakeFiles/srsran_phy.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/support/CMakeFiles/support.dir/DependInfo.cmake"

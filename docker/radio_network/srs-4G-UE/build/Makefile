@@ -4896,6 +4896,19 @@ srsgnb_mac/fast:
 .PHONY : srsgnb_mac/fast
 
 #=============================================================================
+# Target rules for targets named edgeric
+
+# Build rule for target.
+edgeric: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 edgeric
+.PHONY : edgeric
+
+# fast build rule for target.
+edgeric/fast:
+	$(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build
+.PHONY : edgeric/fast
+
+#=============================================================================
 # Target rules for targets named sched_nr_test_suite
 
 # Build rule for target.
@@ -5597,6 +5610,7 @@ help:
 	@echo "... s1ap_test"
 	@echo "... srsgnb_stack"
 	@echo "... srsgnb_mac"
+	@echo "... edgeric"
 	@echo "... sched_nr_test_suite"
 	@echo "... sched_nr_prb_test"
 	@echo "... sched_nr_sch_test"

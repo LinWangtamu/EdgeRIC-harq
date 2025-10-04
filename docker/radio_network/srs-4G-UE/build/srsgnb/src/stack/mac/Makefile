@@ -204,6 +204,21 @@ srsgnb_mac/fast:
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/build.make srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/build
 .PHONY : srsgnb_mac/fast
 
+# Convenience name for target.
+srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/rule:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f CMakeFiles/Makefile2 srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/rule
+.PHONY : srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/rule
+
+# Convenience name for target.
+edgeric: srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/rule
+
+.PHONY : edgeric
+
+# fast build rule for target.
+edgeric/fast:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build
+.PHONY : edgeric/fast
+
 harq_softbuffer.o: harq_softbuffer.cc.o
 
 .PHONY : harq_softbuffer.o
@@ -231,13 +246,67 @@ harq_softbuffer.cc.s:
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/build.make srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/harq_softbuffer.cc.s
 .PHONY : harq_softbuffer.cc.s
 
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.o: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.o
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.o
+
+# target to build an object file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.o:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.o
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.o
+
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.i: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.i
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.i
+
+# target to preprocess a source file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.i:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.i
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.i
+
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.s: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.s
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.s
+
+# target to generate assembly for a file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.s:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.s
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc.s
+
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.o: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.o
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.o
+
+# target to build an object file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.o:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.o
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.o
+
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.i: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.i
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.i
+
+# target to preprocess a source file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.i:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.i
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.i
+
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.s: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.s
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.s
+
+# target to generate assembly for a file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.s:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.s
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc.s
+
 home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.o: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o
 
 .PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.o
 
 # target to build an object file
 home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/build.make srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o
 .PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o
 
 home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.i: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i
@@ -246,7 +315,7 @@ home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.i: home/EdgeRIC-A-
 
 # target to preprocess a source file
 home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/build.make srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i
 .PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i
 
 home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.s: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s
@@ -255,8 +324,35 @@ home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.s: home/EdgeRIC-A-
 
 # target to generate assembly for a file
 home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s:
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/build.make srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s
 .PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s
+
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.o: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.o
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.o
+
+# target to build an object file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.o:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.o
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.o
+
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.i: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.i
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.i
+
+# target to preprocess a source file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.i:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.i
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.i
+
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.s: home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.s
+
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.s
+
+# target to generate assembly for a file
+home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.s:
+	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build && $(MAKE) -f srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/build.make srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.s
+.PHONY : home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.cc.s
 
 mac_nr.o: mac_nr.cc.o
 
@@ -733,12 +829,22 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... package"
 	@echo "... srsgnb_mac"
+	@echo "... edgeric"
 	@echo "... harq_softbuffer.o"
 	@echo "... harq_softbuffer.i"
 	@echo "... harq_softbuffer.s"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.o"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.i"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_mcs.pb.s"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.o"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.i"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/control_weights.pb.s"
 	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.o"
 	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.i"
 	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.s"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.o"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.i"
+	@echo "... home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/metrics.pb.s"
 	@echo "... mac_nr.o"
 	@echo "... mac_nr.i"
 	@echo "... mac_nr.s"

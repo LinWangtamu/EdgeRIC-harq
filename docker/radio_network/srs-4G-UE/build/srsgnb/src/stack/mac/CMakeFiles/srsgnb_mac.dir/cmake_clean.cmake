@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/srsgnb_mac.dir/harq_softbuffer.cc.o"
-  "CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o"
   "CMakeFiles/srsgnb_mac.dir/mac_nr.cc.o"
   "CMakeFiles/srsgnb_mac.dir/sched_nr.cc.o"
   "CMakeFiles/srsgnb_mac.dir/sched_nr_bwp.cc.o"

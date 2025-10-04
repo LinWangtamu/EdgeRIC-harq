@@ -95,6 +95,8 @@ srsgnb/src/stack/rrc/test/rrc_nr_test: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 srsgnb/src/stack/rrc/test/rrc_nr_test: lib/src/support/libsupport.a
 srsgnb/src/stack/rrc/test/rrc_nr_test: lib/src/srslog/libsrslog.a
 srsgnb/src/stack/rrc/test/rrc_nr_test: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+srsgnb/src/stack/rrc/test/rrc_nr_test: srsgnb/src/stack/mac/libedgeric.a
+srsgnb/src/stack/rrc/test/rrc_nr_test: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 srsgnb/src/stack/rrc/test/rrc_nr_test: srsgnb/src/stack/rrc/test/CMakeFiles/rrc_nr_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable rrc_nr_test"
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/rrc/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rrc_nr_test.dir/link.txt --verbose=$(VERBOSE)

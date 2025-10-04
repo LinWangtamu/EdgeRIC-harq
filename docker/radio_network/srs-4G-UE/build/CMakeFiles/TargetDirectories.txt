@@ -1350,6 +1350,7 @@
 /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/rebuild_cache.dir
 /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/package.dir
 /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir
+/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/edgeric.dir
 /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/test/CMakeFiles/install/strip.dir
 /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/test/CMakeFiles/install/local.dir
 /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/test/CMakeFiles/list_install_components.dir

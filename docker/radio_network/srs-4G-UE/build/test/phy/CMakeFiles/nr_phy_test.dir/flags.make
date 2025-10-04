@@ -6,5 +6,5 @@ CXX_FLAGS = -I../../srsRAN-5G-ER/lib -Wall -Wno-comment -Wno-reorder -Wno-unused
 
 CXX_DEFINES = -DASSERTS_ENABLED -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DENABLE_TIMEPROF
 
-CXX_INCLUDES = -I/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/include -I/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/lib/include -I/home/EdgeRIC-A-real-time-RIC/srs-4G-UE -I/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/cmake/modules 
+CXX_INCLUDES = -I/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/include -I/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/lib/include -I/home/EdgeRIC-A-real-time-RIC/srs-4G-UE -I/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/cmake/modules -I/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/srsgnb/src/stack/mac/../../../../../srsRAN-5G-ER/lib 
 

@@ -18,6 +18,24 @@
 # and at http://www.gnu.org/licenses/.
 #
 
+if (NOT TARGET edgeric)
+  find_package(Protobuf REQUIRED)
+  add_library(edgeric STATIC
+    ../../../../../srsRAN-5G-ER/lib/edgeric/edgeric.cpp
+    ../../../../../srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc
+    ../../../../../srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc
+    ../../../../../srsRAN-5G-ER/lib/edgeric/metrics.pb.cc)
+  target_include_directories(edgeric PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../srsRAN-5G-ER/lib
+    ${PROTOBUF_INCLUDE_DIRS})
+  target_link_libraries(edgeric PUBLIC ${ZMQ_LIBRARIES} ${Protobuf_LIBRARIES} zmq)
+  set_source_files_properties(
+    ../../../../../srsRAN-5G-ER/lib/edgeric/control_mcs.pb.cc
+    ../../../../../srsRAN-5G-ER/lib/edgeric/control_weights.pb.cc
+    ../../../../../srsRAN-5G-ER/lib/edgeric/metrics.pb.cc
+    PROPERTIES COMPILE_FLAGS -Wno-array-bounds)
+endif()
+
 set(SOURCES mac_nr.cc
             ue_nr.cc
             sched_nr.cc
@@ -35,11 +53,10 @@ set(SOURCES mac_nr.cc
             sched_nr_time_rr.cc
             harq_softbuffer.cc
             sched_nr_signalling.cc
-            sched_nr_interface_utils.cc
-            ../../../../../srsRAN-5G-ER/lib/edgeric/edgeric.cpp)
+            sched_nr_interface_utils.cc)
 
 add_library(srsgnb_mac STATIC ${SOURCES})
-target_link_libraries(srsgnb_mac srsenb_mac_common srsran_mac rrc_nr_asn1 ${ZMQ_LIBRARIES} ${Protobuf_LIBRARIES} zmq)
+target_link_libraries(srsgnb_mac srsenb_mac_common srsran_mac rrc_nr_asn1 edgeric)
 include_directories(${PROJECT_SOURCE_DIR})
 
 add_subdirectory(test)

@@ -8,3 +8,4 @@ docker/radio_network/srs-4G-UE/build
 *.a
 *.so
 *.so.*
+docker/radio_network/protobuf-cpp-*.tar.gz

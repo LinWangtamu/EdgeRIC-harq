@@ -291,19 +291,6 @@ srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/sched_nr_interface_utils.cc.s: cm
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsgnb_mac.dir/sched_nr_interface_utils.cc.s"
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/srsgnb/src/stack/mac/sched_nr_interface_utils.cc -o CMakeFiles/srsgnb_mac.dir/sched_nr_interface_utils.cc.s
 
-srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o: srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/flags.make
-srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o: /home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o"
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o -c /home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp
-
-srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i"
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp > CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.i
-
-srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s"
-	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp -o CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.s
-
 # Object files for target srsgnb_mac
 srsgnb_mac_OBJECTS = \
 "CMakeFiles/srsgnb_mac.dir/mac_nr.cc.o" \
@@ -323,8 +310,7 @@ srsgnb_mac_OBJECTS = \
 "CMakeFiles/srsgnb_mac.dir/sched_nr_time_rr.cc.o" \
 "CMakeFiles/srsgnb_mac.dir/harq_softbuffer.cc.o" \
 "CMakeFiles/srsgnb_mac.dir/sched_nr_signalling.cc.o" \
-"CMakeFiles/srsgnb_mac.dir/sched_nr_interface_utils.cc.o" \
-"CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o"
+"CMakeFiles/srsgnb_mac.dir/sched_nr_interface_utils.cc.o"
 
 # External object files for target srsgnb_mac
 srsgnb_mac_EXTERNAL_OBJECTS =
@@ -347,10 +333,9 @@ srsgnb/src/stack/mac/libsrsgnb_mac.a: srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac
 srsgnb/src/stack/mac/libsrsgnb_mac.a: srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/harq_softbuffer.cc.o
 srsgnb/src/stack/mac/libsrsgnb_mac.a: srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/sched_nr_signalling.cc.o
 srsgnb/src/stack/mac/libsrsgnb_mac.a: srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/sched_nr_interface_utils.cc.o
-srsgnb/src/stack/mac/libsrsgnb_mac.a: srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o
 srsgnb/src/stack/mac/libsrsgnb_mac.a: srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/build.make
 srsgnb/src/stack/mac/libsrsgnb_mac.a: srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX static library libsrsgnb_mac.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX static library libsrsgnb_mac.a"
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac && $(CMAKE_COMMAND) -P CMakeFiles/srsgnb_mac.dir/cmake_clean_target.cmake
 	cd /home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsgnb_mac.dir/link.txt --verbose=$(VERBOSE)
 

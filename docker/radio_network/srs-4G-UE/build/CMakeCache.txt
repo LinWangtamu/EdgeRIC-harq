@@ -520,6 +520,30 @@ PCSCLITE_LIBRARY:FILEPATH=PCSCLITE_LIBRARY-NOTFOUND
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
+//Path to a file.
+Protobuf_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+Protobuf_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf.so
+
+//Path to a library.
+Protobuf_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf.so
+
+//Path to a library.
+Protobuf_LITE_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf-lite.so
+
+//Path to a library.
+Protobuf_LITE_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf-lite.so
+
+//The Google Protocol Buffers Compiler
+Protobuf_PROTOC_EXECUTABLE:FILEPATH=/usr/bin/protoc
+
+//Path to a library.
+Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=Protobuf_PROTOC_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=Protobuf_PROTOC_LIBRARY_RELEASE-NOTFOUND
+
 //Enable RPATH
 RPATH:BOOL=OFF
 
@@ -530,7 +554,7 @@ SCTP_INCLUDE_DIRS:PATH=/usr/include
 SCTP_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libsctp.so
 
 //Name of the computer/site where compile is being run
-SITE:STRING=65daae6c6ca3
+SITE:STRING=d0ca414ff79c
 
 //Path to a file.
 SKIQ_INCLUDE_DIRS:PATH=SKIQ_INCLUDE_DIRS-NOTFOUND
@@ -632,6 +656,9 @@ boost_program_options_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_program_opt
 boost_system_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0
 
 //Dependencies for the target
+edgeric_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;zmq;
+
+//Dependencies for the target
 enb_cfg_parser_LIB_DEPENDS:STATIC=general;srsran_common;general;srsgnb_rrc_config_utils;general;/usr/lib/x86_64-linux-gnu/libconfig++.so;
 
 //Dependencies for the target
@@ -668,7 +695,7 @@ srsenb_mac_LIB_DEPENDS:STATIC=general;srsenb_mac_common;
 srsenb_upper_LIB_DEPENDS:STATIC=general;srsran_asn1;general;srsran_gtpu;
 
 //Dependencies for the target
-srsgnb_mac_LIB_DEPENDS:STATIC=general;srsenb_mac_common;general;srsran_mac;general;rrc_nr_asn1;general;zmq;
+srsgnb_mac_LIB_DEPENDS:STATIC=general;srsenb_mac_common;general;srsran_mac;general;rrc_nr_asn1;general;edgeric;
 
 //Dependencies for the target
 srsgnb_ric_LIB_DEPENDS:STATIC=general;srsran_asn1;general;ric_e2;
@@ -1011,6 +1038,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_FFTW3F:INTERNAL=[/usr/lib/x86_64-linux-gnu/libfftw3
 FIND_PACKAGE_MESSAGE_DETAILS_MbedTLS:INTERNAL=[/usr/lib/x86_64-linux-gnu/libmbedcrypto.so][/usr/include][v()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
+//Details about finding Protobuf
+FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread][/usr/include][v3.6.1()]
 //Details about finding SCTP
 FIND_PACKAGE_MESSAGE_DETAILS_SCTP:INTERNAL=[/usr/lib/x86_64-linux-gnu/libsctp.so][/usr/include][v()]
 //Details about finding Threads
@@ -1254,6 +1283,22 @@ PC_SRSGUI_srsgui_PREFIX:INTERNAL=
 PC_SRSGUI_srsgui_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_INCLUDE_DIR
+Protobuf_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LIBRARY_DEBUG
+Protobuf_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LIBRARY_RELEASE
+Protobuf_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LITE_LIBRARY_DEBUG
+Protobuf_LITE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LITE_LIBRARY_RELEASE
+Protobuf_LITE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_EXECUTABLE
+Protobuf_PROTOC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_DEBUG
+Protobuf_PROTOC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_RELEASE
+Protobuf_PROTOC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //RF frontend found
 RF_FOUND:INTERNAL=TRUE
 //ADVANCED property for variable: SCTP_INCLUDE_DIRS

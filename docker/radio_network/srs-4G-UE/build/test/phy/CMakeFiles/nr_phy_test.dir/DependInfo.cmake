@@ -23,6 +23,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../lib/include"
   "../"
   "../cmake/modules"
+  "../srsgnb/src/stack/mac/../../../../../srsRAN-5G-ER/lib"
   )
 
 # Targets to which this target links.
@@ -41,6 +42,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/support/CMakeFiles/support.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/srslog/CMakeFiles/srslog.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsenb/src/stack/mac/common/CMakeFiles/srsenb_mac_common.dir/DependInfo.cmake"
+  "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

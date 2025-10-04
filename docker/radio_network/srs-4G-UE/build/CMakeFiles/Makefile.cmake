@@ -267,6 +267,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.16/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.16/Modules/FindPkgConfig.cmake"
+  "/usr/share/cmake-3.16/Modules/FindProtobuf.cmake"
   "/usr/share/cmake-3.16/Modules/FindThreads.cmake"
   "/usr/share/cmake-3.16/Modules/GNUInstallDirs.cmake"
   "/usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake"
@@ -277,6 +278,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake-3.16/Modules/SelectLibraryConfigurations.cmake"
   "/usr/share/cmake-3.16/Templates/CPackConfig.cmake.in"
   )
 
@@ -792,6 +794,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "srsenb/test/s1ap/CMakeFiles/s1ap_test.dir/DependInfo.cmake"
   "srsgnb/src/stack/CMakeFiles/srsgnb_stack.dir/DependInfo.cmake"
   "srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/DependInfo.cmake"
+  "srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/DependInfo.cmake"
   "srsgnb/src/stack/mac/test/CMakeFiles/sched_nr_test_suite.dir/DependInfo.cmake"
   "srsgnb/src/stack/mac/test/CMakeFiles/sched_nr_prb_test.dir/DependInfo.cmake"
   "srsgnb/src/stack/mac/test/CMakeFiles/sched_nr_sch_test.dir/DependInfo.cmake"

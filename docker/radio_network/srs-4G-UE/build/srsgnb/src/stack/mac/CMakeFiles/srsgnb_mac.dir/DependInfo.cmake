@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/srsgnb/src/stack/mac/harq_softbuffer.cc" "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/harq_softbuffer.cc.o"
-  "/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp" "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/home/EdgeRIC-A-real-time-RIC/srsRAN-5G-ER/lib/edgeric/edgeric.cpp.o"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/srsgnb/src/stack/mac/mac_nr.cc" "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/mac_nr.cc.o"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/srsgnb/src/stack/mac/sched_nr.cc" "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/sched_nr.cc.o"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/srsgnb/src/stack/mac/sched_nr_bwp.cc" "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/srsgnb_mac.dir/sched_nr_bwp.cc.o"
@@ -46,6 +45,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsenb/src/stack/mac/common/CMakeFiles/srsenb_mac_common.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/mac/CMakeFiles/srsran_mac.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/asn1/CMakeFiles/rrc_nr_asn1.dir/DependInfo.cmake"
+  "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/asn1/CMakeFiles/asn1_utils.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/common/CMakeFiles/srsran_common.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/CMakeFiles/srsran_phy.dir/DependInfo.cmake"

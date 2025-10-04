@@ -190,6 +190,8 @@ srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
 srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libconfig++.so
 srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libsctp.so
 srsenb/src/srsenb: srsenb/src/stack/mac/common/libsrsenb_mac_common.a
+srsenb/src/srsenb: srsgnb/src/stack/mac/libedgeric.a
+srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 srsenb/src/srsenb: lib/src/asn1/libsrsran_asn1.a
 srsenb/src/srsenb: lib/src/phy/rf/libsrsran_rf.so.23.04.0
 srsenb/src/srsenb: lib/src/phy/rf/libsrsran_rf_utils.a

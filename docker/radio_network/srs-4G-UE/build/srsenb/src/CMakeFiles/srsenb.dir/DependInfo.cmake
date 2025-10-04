@@ -28,6 +28,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../lib/include"
   "../"
   "../cmake/modules"
+  "../srsgnb/src/stack/mac/../../../../../srsRAN-5G-ER/lib"
   )
 
 # Targets to which this target links.
@@ -61,6 +62,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/asn1/CMakeFiles/ngap_nr_asn1.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/asn1/CMakeFiles/ric_e2.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsenb/src/stack/mac/common/CMakeFiles/srsenb_mac_common.dir/DependInfo.cmake"
+  "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/srsgnb/src/stack/mac/CMakeFiles/edgeric.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/asn1/CMakeFiles/srsran_asn1.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/rf/CMakeFiles/srsran_rf.dir/DependInfo.cmake"
   "/home/EdgeRIC-A-real-time-RIC/srs-4G-UE/build/lib/src/phy/rf/CMakeFiles/srsran_rf_utils.dir/DependInfo.cmake"
