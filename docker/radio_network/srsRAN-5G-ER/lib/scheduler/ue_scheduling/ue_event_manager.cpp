@@ -26,7 +26,29 @@
 #include "../uci_scheduling/uci_scheduler_impl.h"
 #include "../../edgeric/edgeric.h"
 
+#include <atomic>
+#include <cstdint>
+#include <mutex>
+#include <random>
+#include <unordered_map>
+
 using namespace srsran;
+
+namespace {
+
+std::atomic<uint64_t>                   ul_harq_ack_call_count{0};
+std::mutex                             ul_harq_ack_count_mutex;
+std::unordered_map<uint16_t, uint64_t> ul_harq_ack_calls_by_rnti;
+std::atomic<double>                    ack_to_nack_probability{0.05}; // Flip 5% of UL ACKs into NACKs.
+
+bool should_flip_ack()
+{
+  thread_local std::mt19937 rng{std::random_device{}()};
+  static thread_local std::uniform_real_distribution<double> dist(0.0, 1.0);
+  return dist(rng) < ack_to_nack_probability.load(std::memory_order_relaxed);
+}
+
+} // namespace
 
 /// \brief More than one DL buffer occupancy update may be received per slot for the same UE and bearer. This class
 /// ensures that the UE DL buffer occupancy is updated only once per bearer per slot for efficiency reasons.
@@ -323,23 +345,49 @@ void ue_event_manager::handle_ul_phr_indication(const ul_phr_indication_message&
   }
 }
 
-          
 void ue_event_manager::handle_crc_indication(const ul_crc_indication& crc_ind)
 {
   srsran_assert(cell_exists(crc_ind.cell_index), "Invalid cell index");
-  
+
   int slot_delay = last_sl - crc_ind.sl_rx;
   for (unsigned i = 0, e = crc_ind.crcs.size(); i != e; ++i) {
-    
+
     cell_specific_events[crc_ind.cell_index].emplace(
         crc_ind.crcs[i].ue_index,
-        [this, slot_delay, sl_rx = crc_ind.sl_rx, crc = crc_ind.crcs[i]](ue_cell& ue_cc) {
+        [this, slot_delay, sl_rx = crc_ind.sl_rx, crc = crc_ind.crcs[i]](ue_cell& ue_cc) mutable {
+          bool forced_nack = false;
+          if (crc.tb_crc_success && should_flip_ack()) {
+            crc.tb_crc_success = false;
+            forced_nack        = true;
+          }
+
           const int tbs = ue_cc.handle_crc_pdu(sl_rx, crc);
           if (tbs < 0) {
             return;
           }
 
-          edgeric::set_ul_harq_ack(static_cast<unsigned int>(crc.rnti), crc.tb_crc_success);
+          const uint16_t rnti             = static_cast<uint16_t>(crc.rnti);
+          const uint32_t tti_cnt_snapshot = edgeric::tti_cnt;
+          const bool     ack              = crc.tb_crc_success;
+          const uint64_t total_call_count = ++ul_harq_ack_call_count;
+          uint64_t       per_rnti_call_count = 0;
+
+          {
+            std::lock_guard<std::mutex> lock(ul_harq_ack_count_mutex);
+            per_rnti_call_count = ++ul_harq_ack_calls_by_rnti[rnti];
+          }
+
+          if (forced_nack) {
+            this->logger.info("Forced UL HARQ ACK->NACK flip rnti={} tti_cnt={}", rnti, tti_cnt_snapshot);
+          }
+
+          edgeric::set_ul_harq_ack(rnti, ack);
+          this->logger.info("set_ul_harq_ack call={} rnti={} rnti_calls={} tti_cnt={} ack={}",
+                            total_call_count,
+                            rnti,
+                            per_rnti_call_count,
+                            tti_cnt_snapshot,
+                            ack);
 
           // Process Timing Advance Offset.
           if (crc.tb_crc_success and crc.time_advance_offset.has_value() and crc.ul_sinr_dB.has_value()) {

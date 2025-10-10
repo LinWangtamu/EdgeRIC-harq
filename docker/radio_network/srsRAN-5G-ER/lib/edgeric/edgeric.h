@@ -28,6 +28,7 @@ private:
     static std::map<uint16_t, float> dl_tbs_ues;
     
     static std::map<uint16_t, bool> ul_harq_ack;
+    static std::map<uint16_t, bool> ul_tx_attempt;
 
     static uint32_t er_ran_index_weights;
     static uint32_t er_ran_index_mcs;
@@ -68,4 +69,3 @@ public:
 };
 
 #endif // EDGERIC_H
-

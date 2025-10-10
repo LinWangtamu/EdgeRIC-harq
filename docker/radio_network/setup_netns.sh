@@ -22,5 +22,7 @@ ip netns add ue4
 # cmake ../
 # make -j `nproc`
 
-# Keep the container running if needed
-tail -f /dev/null
+# Keep the container running by streaming gNB logs to stdout
+LOG_FILE=/tmp/gnb.log
+touch "$LOG_FILE"
+tail -n +1 -F "$LOG_FILE"

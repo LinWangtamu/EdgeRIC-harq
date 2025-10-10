@@ -13,6 +13,7 @@ std::map<uint16_t, uint32_t> edgeric::ue_ul_buffers = {};
 std::map<uint16_t, uint32_t> edgeric::ue_dl_buffers = {};
 std::map<uint16_t, float> edgeric::dl_tbs_ues = {};
 std::map<uint16_t, bool> edgeric::ul_harq_ack = {};
+std::map<uint16_t, bool> edgeric::ul_tx_attempt = {};
 
 // std::map<uint16_t, float> edgeric::weights_recved = {};
 std::map<uint16_t, float> edgeric::weights_recved = {};
@@ -36,6 +37,7 @@ zmq::socket_t subscriber_mcs(context, ZMQ_SUB);
 
 void edgeric::set_ul_harq_ack(uint16_t rnti, bool ack) {
     ul_harq_ack[rnti] = ack;
+    ul_tx_attempt[rnti] = true;
 }
 
 void edgeric::init() {
@@ -111,6 +113,9 @@ void edgeric::send_to_er() {
         if (ack_it != ul_harq_ack.end()) {
             ue_metrics->set_ul_harq_ack(ack_it->second);
         }
+
+        const bool tx_attempt = ul_tx_attempt.find(rnti) != ul_tx_attempt.end();
+        ue_metrics->set_ul_tx_attempt(tx_attempt);
     }
 
     // Serialize the Metrics message to a string
@@ -133,6 +138,7 @@ void edgeric::send_to_er() {
     rx_bytes.clear();
     dl_tbs_ues.clear();
     ul_harq_ack.clear();
+    ul_tx_attempt.clear();
     // ue_dl_buffers.clear();
     // ue_ul_buffers.clear();
 }

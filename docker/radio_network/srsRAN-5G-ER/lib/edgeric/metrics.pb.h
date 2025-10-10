@@ -201,6 +201,12 @@ class UeMetrics : public ::google::protobuf::Message /* @@protoc_insertion_point
   bool ul_harq_ack() const;
   void set_ul_harq_ack(bool value);
 
+  // bool ul_tx_attempt = 21;
+  void clear_ul_tx_attempt();
+  static const int kUlTxAttemptFieldNumber = 21;
+  bool ul_tx_attempt() const;
+  void set_ul_tx_attempt(bool value);
+
   // @@protoc_insertion_point(class_scope:UeMetrics)
  private:
 
@@ -214,6 +220,7 @@ class UeMetrics : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::google::protobuf::uint32 ul_buffer_;
   float dl_tbs_;
   bool ul_harq_ack_;
+  bool ul_tx_attempt_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_metrics_2eproto::TableStruct;
 };
@@ -468,6 +475,20 @@ inline void UeMetrics::set_ul_harq_ack(bool value) {
   
   ul_harq_ack_ = value;
   // @@protoc_insertion_point(field_set:UeMetrics.ul_harq_ack)
+}
+
+// bool ul_tx_attempt = 21;
+inline void UeMetrics::clear_ul_tx_attempt() {
+  ul_tx_attempt_ = false;
+}
+inline bool UeMetrics::ul_tx_attempt() const {
+  // @@protoc_insertion_point(field_get:UeMetrics.ul_tx_attempt)
+  return ul_tx_attempt_;
+}
+inline void UeMetrics::set_ul_tx_attempt(bool value) {
+  
+  ul_tx_attempt_ = value;
+  // @@protoc_insertion_point(field_set:UeMetrics.ul_tx_attempt)
 }
 
 // -------------------------------------------------------------------

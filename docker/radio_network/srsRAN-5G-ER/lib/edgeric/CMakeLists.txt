@@ -1,8 +1,4 @@
-# # Create a library from the edgeric source files
-# add_library(edgeric STATIC edgeric.cpp)
-
-# # Include the current directory for header files
-# target_include_directories(edgeric PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+find_package(Protobuf REQUIRED)
 
 set(SRCS
     edgeric.cpp
@@ -29,4 +25,3 @@ ADD_TO_EXPORTED_LIBS(edgeric)
 # Disable specific warnings for Protobuf files
 ########################################################################
 set_source_files_properties(control_mcs.pb.cc control_weights.pb.cc metrics.pb.cc PROPERTIES COMPILE_FLAGS -Wno-array-bounds)
-

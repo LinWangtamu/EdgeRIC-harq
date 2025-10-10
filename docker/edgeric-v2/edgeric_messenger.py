@@ -55,7 +55,8 @@ class EdgericMessenger:
                 "dl_buffer": ue_metrics.dl_buffer,
                 "ul_buffer": ue_metrics.ul_buffer,
                 "dl_tbs": ue_metrics.dl_tbs,
-                "ul_harq_ack": ue_metrics.ul_harq_ack
+                "ul_harq_ack": ue_metrics.ul_harq_ack,
+                "ul_tx_attempt": ue_metrics.ul_tx_attempt
 
             } for ue_metrics in metrics.ue_metrics}
 
@@ -102,5 +103,4 @@ class EdgericMessenger:
         if (msg.ran_index % 1000 == 0 and flag_print):
             print("RT-E2 Policy (MCS): \n")
             print(f"Sent to RAN: {msg} \n")
-
 

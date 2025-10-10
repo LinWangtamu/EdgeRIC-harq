@@ -56,7 +56,9 @@ class EdgericMessenger:
                 "rx_bytes": ue_metrics.rx_bytes,
                 "dl_buffer": ue_metrics.dl_buffer,
                 "ul_buffer": ue_metrics.ul_buffer,
-                "dl_tbs": ue_metrics.dl_tbs
+                "dl_tbs": ue_metrics.dl_tbs,
+                "ul_harq_ack": ue_metrics.ul_harq_ack,
+                "ul_tx_attempt": ue_metrics.ul_tx_attempt
             } for ue_metrics in metrics.ue_metrics}
 
             # Print the TTI count and UE metrics dictionary for debugging
@@ -189,4 +191,3 @@ while(1):
     #     agent.get_metrics(1)
     # else:
     #     agent.get_metrics(0)
-

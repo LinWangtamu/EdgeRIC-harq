@@ -84,6 +84,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::UeMetrics, ul_buffer_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::UeMetrics, dl_tbs_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::UeMetrics, ul_harq_ack_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::UeMetrics, ul_tx_attempt_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Metrics, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -94,7 +95,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::UeMetrics)},
-  { 14, -1, sizeof(::Metrics)},
+  { 15, -1, sizeof(::Metrics)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -123,16 +124,16 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\rmetrics.proto\"\242\001\n\tUeMetrics\022\014\n\004rnti\030\001 "
+      "\n\rmetrics.proto\"\271\001\n\tUeMetrics\022\014\n\004rnti\030\001 "
       "\001(\r\022\013\n\003cqi\030\002 \001(\r\022\013\n\003snr\030\003 \001(\002\022\020\n\010tx_byte"
       "s\030\004 \001(\002\022\020\n\010rx_bytes\030\005 \001(\002\022\021\n\tdl_buffer\030\006"
       " \001(\r\022\021\n\tul_buffer\030\007 \001(\r\022\016\n\006dl_tbs\030\010 \001(\002\022"
-      "\023\n\013ul_harq_ack\030\024 \001(\010\":\n\007Metrics\022\017\n\007tti_c"
-      "nt\030\001 \001(\r\022\036\n\nue_metrics\030\002 \003(\0132\n.UeMetrics"
-      "b\006proto3"
+      "\023\n\013ul_harq_ack\030\024 \001(\010\022\025\n\rul_tx_attempt\030\025 "
+      "\001(\010\":\n\007Metrics\022\017\n\007tti_cnt\030\001 \001(\r\022\036\n\nue_me"
+      "trics\030\002 \003(\0132\n.UeMetricsb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 248);
+      descriptor, 271);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "metrics.proto", &protobuf_RegisterTypes);
 }
@@ -163,6 +164,7 @@ const int UeMetrics::kDlBufferFieldNumber;
 const int UeMetrics::kUlBufferFieldNumber;
 const int UeMetrics::kDlTbsFieldNumber;
 const int UeMetrics::kUlHarqAckFieldNumber;
+const int UeMetrics::kUlTxAttemptFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 UeMetrics::UeMetrics()
@@ -177,15 +179,15 @@ UeMetrics::UeMetrics(const UeMetrics& from)
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&rnti_, &from.rnti_,
-    static_cast<size_t>(reinterpret_cast<char*>(&ul_harq_ack_) -
-    reinterpret_cast<char*>(&rnti_)) + sizeof(ul_harq_ack_));
+    static_cast<size_t>(reinterpret_cast<char*>(&ul_tx_attempt_) -
+    reinterpret_cast<char*>(&rnti_)) + sizeof(ul_tx_attempt_));
   // @@protoc_insertion_point(copy_constructor:UeMetrics)
 }
 
 void UeMetrics::SharedCtor() {
   ::memset(&rnti_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&ul_harq_ack_) -
-      reinterpret_cast<char*>(&rnti_)) + sizeof(ul_harq_ack_));
+      reinterpret_cast<char*>(&ul_tx_attempt_) -
+      reinterpret_cast<char*>(&rnti_)) + sizeof(ul_tx_attempt_));
 }
 
 UeMetrics::~UeMetrics() {
@@ -217,8 +219,8 @@ void UeMetrics::Clear() {
   (void) cached_has_bits;
 
   ::memset(&rnti_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&ul_harq_ack_) -
-      reinterpret_cast<char*>(&rnti_)) + sizeof(ul_harq_ack_));
+      reinterpret_cast<char*>(&ul_tx_attempt_) -
+      reinterpret_cast<char*>(&rnti_)) + sizeof(ul_tx_attempt_));
   _internal_metadata_.Clear();
 }
 
@@ -358,6 +360,20 @@ bool UeMetrics::MergePartialFromCodedStream(
         break;
       }
 
+      // bool ul_tx_attempt = 21;
+      case 21: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(168u /* 168 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &ul_tx_attempt_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -429,6 +445,11 @@ void UeMetrics::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(20, this->ul_harq_ack(), output);
   }
 
+  // bool ul_tx_attempt = 21;
+  if (this->ul_tx_attempt() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(21, this->ul_tx_attempt(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -486,6 +507,11 @@ void UeMetrics::SerializeWithCachedSizes(
   // bool ul_harq_ack = 20;
   if (this->ul_harq_ack() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(20, this->ul_harq_ack(), target);
+  }
+
+  // bool ul_tx_attempt = 21;
+  if (this->ul_tx_attempt() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(21, this->ul_tx_attempt(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -558,6 +584,11 @@ size_t UeMetrics::ByteSizeLong() const {
     total_size += 2 + 1;
   }
 
+  // bool ul_tx_attempt = 21;
+  if (this->ul_tx_attempt() != 0) {
+    total_size += 2 + 1;
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -612,6 +643,9 @@ void UeMetrics::MergeFrom(const UeMetrics& from) {
   if (from.ul_harq_ack() != 0) {
     set_ul_harq_ack(from.ul_harq_ack());
   }
+  if (from.ul_tx_attempt() != 0) {
+    set_ul_tx_attempt(from.ul_tx_attempt());
+  }
 }
 
 void UeMetrics::CopyFrom(const ::google::protobuf::Message& from) {
@@ -647,6 +681,7 @@ void UeMetrics::InternalSwap(UeMetrics* other) {
   swap(ul_buffer_, other->ul_buffer_);
   swap(dl_tbs_, other->dl_tbs_);
   swap(ul_harq_ack_, other->ul_harq_ack_);
+  swap(ul_tx_attempt_, other->ul_tx_attempt_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 

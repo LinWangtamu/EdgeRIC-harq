@@ -39,7 +39,7 @@ cell_cfg:
     csi_rs_period: 20                                                       # Physical cell ID.
 log:
   filename: /tmp/gnb.log                                        # Path of the log file.
-  all_level: warning
+  all_level: info
 cu_cp:
   inactivity_timer: 7200 #600 #7200                                               # Logging level applied to all layers.
 pcap:
