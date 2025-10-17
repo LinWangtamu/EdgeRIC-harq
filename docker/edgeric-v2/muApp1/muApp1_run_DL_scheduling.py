@@ -24,7 +24,7 @@ avg_CQIs  = []
 
 # Initialize the EdgericMessenger for weights and the VWD stub.
 edgeric_messenger = EdgericMessenger(socket_type="weights")
-vwd_policy = VWDPolicy()
+vwd_policy = VWDPolicy(manual_q=None)
 
 def eval_loop_weight(eval_episodes, idx_algo):
     
@@ -74,7 +74,7 @@ def eval_loop_weight(eval_episodes, idx_algo):
 
         # algo5 VWD (stub; only subscribes to RT-E2 metrics for now)
         if(idx_algo == 5):
-            vwd_policy.poll_metrics()
+            vwd_policy.step() 
             value_algo = "VWD"
 
         if(flag == True):
