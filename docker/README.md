@@ -101,7 +101,7 @@ Make sure to kill all these in case it is still active ``sudo kill -9 <PID>``
 ```bash
 docker exec -it edgeric_v2 bash
 redis-cli set scheduling_algorithm "Max CQI" # Other options "Proportional Fair"
-                                             # "Max Weight", "Round Robin", "RL"
+                                             # "Max Weight", "Round Robin", "VWD", "RL"
 ```
 **Terminal 10: Start the muApp** 
 ```bash

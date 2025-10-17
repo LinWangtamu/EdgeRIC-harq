@@ -49,7 +49,7 @@ Set the scheduling algorithm you want to run:
 ```bash
 # Line 259
 selected_algorithm = "Max CQI"   # selection can be: Max CQI, Max Weight,
-                                 # Proportional Fair (PF), Round Robin 
+                                 # Proportional Fair (PF), Round Robin, VWD
                                  # RL - models are included for 2 UEs
 ```
 If the algorithm selected is RL, set the directory for the RL model
@@ -73,7 +73,7 @@ The respective models are saved in:
 
 ```bash
 redis-cli set scheduling_algorithm "Max Weight" #selection can be: Max CQI, Max Weight,
-                                                # Proportional Fair (PF), Round Robin
+                                                # Proportional Fair (PF), Round Robin, VWD
                                                 # RL - models are included for 2 UEs
 ```
 
@@ -231,4 +231,3 @@ Bernoulli  ───► │            │ │ │ │ │ ──►   f(CQI_{N}
 * State_space : ```[BL1,CQI1,BL2,CQI2.....]``` (if augmented_state_space=False)
 * Action_space : ```[Weight1,Weight2.....]```
 * Parameters of the env configurable in ```"./conf/edge_ric.yml"```, under ```env_config``` field
-

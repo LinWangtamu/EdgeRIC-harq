@@ -17,12 +17,14 @@ import time
 import torch
 import redis
 from edgeric_messenger import EdgericMessenger
+from vwd_policy import VWDPolicy
 
 total_brate = []
 avg_CQIs  = []
 
-# Initialize the EdgericMessenger for weights
+# Initialize the EdgericMessenger for weights and the VWD stub.
 edgeric_messenger = EdgericMessenger(socket_type="weights")
+vwd_policy = VWDPolicy()
 
 def eval_loop_weight(eval_episodes, idx_algo):
     
@@ -69,6 +71,11 @@ def eval_loop_weight(eval_episodes, idx_algo):
             edgeric_messenger.send_scheduling_weight(edgeric_messenger.ran_tti, weights, False)
             rr_cnt = rr_cnt + 1
             value_algo = "Round Robin"
+
+        # algo5 VWD (stub; only subscribes to RT-E2 metrics for now)
+        if(idx_algo == 5):
+            vwd_policy.poll_metrics()
+            value_algo = "VWD"
 
         if(flag == True):
             cnt = 0
@@ -281,6 +288,7 @@ algorithm_mapping = {
     "Max Weight": 2,
     "Proportional Fair": 3,
     "Round Robin": 4,
+    "VWD": 5,
     "RL": 20  # Adjust according to your specific algorithms and indices
 }
 
@@ -305,7 +313,10 @@ if __name__ == "__main__":
                         print("Algorithm index: ", idx_algo, " , ", selected_algorithm)
                         if idx_algo < 20:
                             eval_loop_weight(1000, idx_algo)  # For traditional scheduling algorithms
-                            print(f"total system throughput: {np.mean(total_brate)*8/1000} \n") 
+                            if total_brate:
+                                print(f"total system throughput: {np.mean(total_brate)*8/1000} \n")
+                            else:
+                                print("total system throughput: N/A (no data collected)\n")
                             total_brate.clear()
                         elif idx_algo == 20:  # For RL model execution
                             rl_model_name = "Fully Trained Model"
