@@ -39,55 +39,51 @@ using namespace srsran;
 namespace {
 
 // -----------------------------------------------------------------------------
-// Per-UE ACK→NACK flip probabilities
+// HARQ drop control - Simple probability-based flipping
 // -----------------------------------------------------------------------------
 
-// Define per-UE success probabilities p_i. (lowest RNTI → first value, etc.)
-static std::vector<double> ue_success_probs = {0.80, 0.45};
+// Configuration: drop probability per UE (probability of flipping ACK → NACK)
+// Example: 0.15 means 15% of ACKs will be flipped to NACKs, resulting in ~85% ACK rate
+static std::vector<double> configured_drop_p = {0.15, 0.05};
 
-// Map<RNTI, flip_probability = 1 - p_i>
-static std::unordered_map<uint16_t, double> ue_ack_flip_probabilities;
+static std::mt19937 rng(12345);
+static std::uniform_real_distribution<double> dist(0.0, 1.0);
 
-// Mutex to protect initialization
-static std::mutex ue_prob_mutex;
+// Map from RNTI to drop probability
+static std::unordered_map<uint16_t, double> ue_drop_probability;
+static std::mutex                           drop_config_mutex;
 
-// RNG setup
-thread_local std::mt19937 rng{std::random_device{}()};
-static thread_local std::uniform_real_distribution<double> dist(0.0, 1.0);
-
-// Initialize per-UE flip probabilities once all UEs are known.
-void initialize_ack_flip_probabilities(const std::vector<uint16_t>& all_rntis)
+void initialize_drop_probabilities(const std::vector<uint16_t>& all_rntis)
 {
-  std::lock_guard<std::mutex> lock(ue_prob_mutex);
-
-  // Sort RNTIs to ensure deterministic mapping.
-  std::vector<uint16_t> sorted = all_rntis;
+  std::lock_guard<std::mutex> lock(drop_config_mutex);
+  std::vector<uint16_t>       sorted = all_rntis;
   std::sort(sorted.begin(), sorted.end());
 
-  ue_ack_flip_probabilities.clear();
-  for (size_t i = 0; i < sorted.size() && i < ue_success_probs.size(); ++i) {
-    double p = ue_success_probs[i];
-    ue_ack_flip_probabilities[sorted[i]] = 1.0 - p;
+  ue_drop_probability.clear();
+  for (size_t i = 0; i < sorted.size() && i < configured_drop_p.size(); ++i) {
+    ue_drop_probability[sorted[i]] = configured_drop_p[i];
   }
 
-  auto& sched_logger = srslog::fetch_basic_logger("SCHED");
-  sched_logger.info("Initialized per-UE HARQ ACK flip probabilities:");
-  for (const auto& kv : ue_ack_flip_probabilities) {
-    sched_logger.info("  RNTI={} → flip_prob={:.3f}", kv.first, kv.second);
+  auto& log = srslog::fetch_basic_logger("SCHED");
+  log.info("Initialized UL HARQ drop probabilities:");
+  for (auto& [rnti, drop_p] : ue_drop_probability) {
+    log.info("  RNTI={} drop_p={:.3f} (target ACK rate={:.3f})", 
+             rnti, drop_p, 1.0 - drop_p);
   }
 }
 
-// Return true if this ACK should be flipped to NACK for this RNTI.
 bool should_flip_ack(uint16_t rnti)
 {
-  auto it = ue_ack_flip_probabilities.find(rnti);
-  double flip_prob = (it != ue_ack_flip_probabilities.end()) ? it->second : 0.0;
-  return dist(rng) < flip_prob;
+  std::lock_guard<std::mutex> lock(drop_config_mutex);
+  auto                        it = ue_drop_probability.find(rnti);
+  if (it == ue_drop_probability.end()) {
+    return false;  // No drop probability configured for this UE
+  }
+  
+  // Simple memoryless flip based on configured probability
+  return dist(rng) < it->second;
 }
 
-// -----------------------------------------------------------------------------
-// Existing counters
-// -----------------------------------------------------------------------------
 std::atomic<uint64_t>                   ul_harq_ack_call_count{0};
 std::mutex                             ul_harq_ack_count_mutex;
 std::unordered_map<uint16_t, uint64_t> ul_harq_ack_calls_by_rnti;
@@ -232,7 +228,7 @@ void ue_event_manager::handle_ue_creation(ue_config_update_event ev)
     // Log Event.
     du_cells[pcell_index].ev_logger->enqueue(scheduler_event_logger::ue_creation_event{ueidx, rnti, pcell_index});
 
-    // Initialize flip probabilities once all UEs exist.
+    // Initialize drop probabilities once all UEs exist.
     std::vector<uint16_t> all_rntis;
     all_rntis.reserve(ue_db.size());
     for (const auto& ue_ptr : ue_db) {
@@ -240,7 +236,7 @@ void ue_event_manager::handle_ue_creation(ue_config_update_event ev)
         all_rntis.push_back(static_cast<uint16_t>(ue_ptr->crnti));
       }
     }
-    initialize_ack_flip_probabilities(all_rntis);
+    initialize_drop_probabilities(all_rntis);
   });
 }
 
@@ -413,6 +409,10 @@ void ue_event_manager::handle_crc_indication(const ul_crc_indication& crc_ind)
           bool     forced_nack = false;
           uint16_t rnti        = static_cast<uint16_t>(crc.rnti);
 
+          // Mark this as a UL transmission attempt
+          edgeric::set_ul_tx_attempt(rnti, true);
+          
+          // Simple probability-based ACK flipping
           if (crc.tb_crc_success && should_flip_ack(rnti)) {
             crc.tb_crc_success = false;
             forced_nack        = true;
@@ -437,13 +437,14 @@ void ue_event_manager::handle_crc_indication(const ul_crc_indication& crc_ind)
             this->logger.info("Forced UL HARQ ACK->NACK flip rnti={} tti_cnt={}", rnti, tti_cnt_snapshot);
           }
 
+          // Set the HARQ ACK result (after potential flip)
           edgeric::set_ul_harq_ack(rnti, ack);
-          this->logger.info("set_ul_harq_ack call={} rnti={} rnti_calls={} tti_cnt={} ack={}",
-                            total_call_count,
-                            rnti,
-                            per_rnti_call_count,
-                            tti_cnt_snapshot,
-                            ack);
+          this->logger.debug("UL HARQ ACK set: call={} rnti={} rnti_calls={} tti_cnt={} ack={}",
+                             total_call_count,
+                             rnti,
+                             per_rnti_call_count,
+                             tti_cnt_snapshot,
+                             ack);
 
           // Process Timing Advance Offset.
           if (crc.tb_crc_success and crc.time_advance_offset.has_value() and crc.ul_sinr_dB.has_value()) {

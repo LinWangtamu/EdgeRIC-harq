@@ -22,19 +22,28 @@
 
 #pragma once
 
+#include <array>
+#include <memory>
+#include <optional>
+#include <utility>
+
 #include "../config/sched_config_manager.h"
 #include "../slicing/slice_scheduler.h"
 #include "../support/slot_event_list.h"
 #include "ue.h"
 #include "ue_fallback_scheduler.h"
 #include "srsran/adt/unique_function.h"
+#include "srsran/adt/span.h"
 #include "srsran/ran/du_types.h"
+#include "srsran/ran/slot_point.h"
+#include "srsran/scheduler/scheduler_slot_handler.h"
 
 namespace srsran {
 
 class scheduler_metrics_handler;
 class scheduler_event_logger;
 class uci_scheduler_impl;
+class ue_repository;
 
 /// \brief Class used to manage events that arrive to the scheduler and are directed at UEs.
 /// This class acts as a facade for several of the ue_scheduler subcomponents, managing the asynchronous configuration
@@ -83,15 +92,13 @@ private:
     unique_function<void()> callback;
 
     template <typename Callable>
-    common_event_t(du_ue_index_t ue_index_, Callable&& c) : ue_index(ue_index_), callback(std::forward<Callable>(c))
-    {
-    }
+    common_event_t(du_ue_index_t ue_index_, Callable&& c) : ue_index(ue_index_), callback(std::forward<Callable>(c)) {}
   };
   struct cell_event_t {
     du_ue_index_t                   ue_index = MAX_NOF_DU_UES;
     unique_function<void(ue_cell&)> callback;
-    const char*                     event_name;
-    bool                            warn_if_ignored;
+    const char*                     event_name      = nullptr;
+    bool                            warn_if_ignored = false;
 
     template <typename Callable>
     cell_event_t(du_ue_index_t ue_index_, Callable&& c, const char* event_name_, bool log_warn_if_event_ignored) :
