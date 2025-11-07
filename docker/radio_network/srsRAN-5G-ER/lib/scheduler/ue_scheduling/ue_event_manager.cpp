@@ -44,7 +44,7 @@ namespace {
 
 // Configuration: drop probability per UE (probability of flipping ACK → NACK)
 // Example: 0.15 means 15% of ACKs will be flipped to NACKs, resulting in ~85% ACK rate
-static std::vector<double> configured_drop_p = {0.15, 0.05};
+static std::vector<double> configured_drop_p = {0, 0};
 
 static std::mt19937 rng(12345);
 static std::uniform_real_distribution<double> dist(0.0, 1.0);
