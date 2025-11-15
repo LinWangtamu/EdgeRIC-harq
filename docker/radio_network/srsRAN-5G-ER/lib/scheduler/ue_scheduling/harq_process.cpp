@@ -27,6 +27,8 @@
 
 using namespace srsran;
 
+//1. Timeout Handler setup
+
 /// \brief No-op handler for HARQ timeout.
 class noop_harq_timeout_handler final : public harq_timeout_handler
 {
@@ -46,6 +48,7 @@ ue_harq_timeout_notifier::ue_harq_timeout_notifier(harq_timeout_handler& handler
 {
 }
 
+//HARQ Process Constructor
 template <bool IsDownlink>
 detail::harq_process<IsDownlink>::harq_process(harq_id_t                h_id,
                                                harq_logger&             logger_,
@@ -53,8 +56,10 @@ detail::harq_process<IsDownlink>::harq_process(harq_id_t                h_id,
                                                unsigned                 max_ack_wait_in_slots_) :
   id(h_id), logger(logger_), timeout_notifier(timeout_notif), max_ack_wait_in_slots(max_ack_wait_in_slots_)
 {
+
 }
 
+//
 template <bool IsDownlink>
 void detail::harq_process<IsDownlink>::slot_indication(slot_point slot_tx)
 {
